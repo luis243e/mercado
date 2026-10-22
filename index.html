@@ -10,351 +10,288 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="background: #0E0F12; color: #F3F1EA; font-family: 'Archivo', system-ui, sans-serif; min-height: 100vh">
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-<header style="max-width: 1320px; margin: 0 auto; padding: 22px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
-<a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F3F1EA">
-<span style="font-family: 'Anton', sans-serif; font-size: 36px; letter-spacing: 1px; line-height: 1">MERCADO</span>
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: #0E0F12; background: var(--accent); padding: 4px 8px; transform: rotate(-4deg)">BOLSA DE LA CANASTA</span>
+<header class="site-header">
+<a class="brand" href="index.html">
+<span class="brand-name">MERCADO</span>
+<span class="brand-tag">BOLSA DE LA CANASTA</span>
 </a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 15px; font-weight: 600">
-<a href="#" aria-current="page" style="text-decoration: none; border-bottom: 3px solid var(--accent); padding-bottom: 4px">Hoy</a>
-<a href="producto.html" style="text-decoration: none; color: #A3A8B2">Productos</a>
-<a href="canasta.html" style="text-decoration: none; color: #A3A8B2">Mi canasta</a>
-<a href="alertas.html" style="text-decoration: none; color: #A3A8B2">Alertas</a>
+<nav class="nav" aria-label="Principal">
+<a href="index.html" aria-current="page">Hoy</a>
+<a href="producto.html">Productos</a>
+<a href="canasta.html">Mi canasta</a>
+<a href="alertas.html">Alertas</a>
 </nav>
-<button type="button" style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; background: transparent; color: #F3F1EA; border: 1px solid #3A3E48; border-radius: 999px; font-family: 'Archivo', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">
+<div class="header-tool">
+<button type="button" class="pill-button city" aria-label="Cartagena, precios de hoy a las 6:00 a. m. Cambiar ciudad">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-Cartagena
+<span>Cartagena</span><span class="city-time">hoy 6:00 a. m.</span>
 </button>
+</div>
 </header>
 
-<div aria-label="Cotizaciones del día" style="border-top: 1px solid #2A2D35; border-bottom: 1px solid #2A2D35; background: #121318; overflow: hidden">
-<div class="tape" style="display: flex; width: max-content">
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">ARROZ 1KG</b>
-<span style="color: #A3A8B2">$4.290</span>
-<span style="color: #C6F432; font-weight: 700">▼ 3,1%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">HUEVOS AA X30</b>
-<span style="color: #A3A8B2">$16.900</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 2,4%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">ACEITE 1L</b>
-<span style="color: #A3A8B2">$9.850</span>
-<span style="color: #C6F432; font-weight: 700">▼ 1,2%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">LECHE 1,1L</b>
-<span style="color: #A3A8B2">$4.650</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 0,8%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">PANELA 500G</b>
-<span style="color: #A3A8B2">$2.700</span>
-<span style="color: #A3A8B2; font-weight: 700">= 0,0%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">CAFÉ 500G</b>
-<span style="color: #A3A8B2">$18.400</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 5,0%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">LENTEJA 500G</b>
-<span style="color: #A3A8B2">$3.990</span>
-<span style="color: #C6F432; font-weight: 700">▼ 2,0%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">ATÚN 160G</b>
-<span style="color: #A3A8B2">$5.200</span>
-<span style="color: #C6F432; font-weight: 700">▼ 0,6%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">AZÚCAR 1KG</b>
-<span style="color: #A3A8B2">$4.100</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 1,1%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">PASTA 500G</b>
-<span style="color: #A3A8B2">$2.950</span>
-<span style="color: #C6F432; font-weight: 700">▼ 4,3%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">ARROZ 1KG</b>
-<span style="color: #A3A8B2">$4.290</span>
-<span style="color: #C6F432; font-weight: 700">▼ 3,1%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">HUEVOS AA X30</b>
-<span style="color: #A3A8B2">$16.900</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 2,4%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">ACEITE 1L</b>
-<span style="color: #A3A8B2">$9.850</span>
-<span style="color: #C6F432; font-weight: 700">▼ 1,2%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">LECHE 1,1L</b>
-<span style="color: #A3A8B2">$4.650</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 0,8%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">PANELA 500G</b>
-<span style="color: #A3A8B2">$2.700</span>
-<span style="color: #A3A8B2; font-weight: 700">= 0,0%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">CAFÉ 500G</b>
-<span style="color: #A3A8B2">$18.400</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 5,0%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">LENTEJA 500G</b>
-<span style="color: #A3A8B2">$3.990</span>
-<span style="color: #C6F432; font-weight: 700">▼ 2,0%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">ATÚN 160G</b>
-<span style="color: #A3A8B2">$5.200</span>
-<span style="color: #C6F432; font-weight: 700">▼ 0,6%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">AZÚCAR 1KG</b>
-<span style="color: #A3A8B2">$4.100</span>
-<span style="color: #FF6A2B; font-weight: 700">▲ 1,1%</span>
-</span>
-
-<span style="display: flex; align-items: baseline; gap: 12px; padding: 13px 28px; border-right: 1px solid #2A2D35; font-family: 'Space Mono', monospace; font-size: 14px; white-space: nowrap">
-<b style="color: #F3F1EA">PASTA 500G</b>
-<span style="color: #A3A8B2">$2.950</span>
-<span style="color: #C6F432; font-weight: 700">▼ 4,3%</span>
-</span>
-
+<section class="ticker" id="cinta" aria-label="Mejor precio de hoy por producto">
+<div class="ticker-label">
+<button type="button" class="ticker-toggle" aria-pressed="false" aria-label="Pausar la cinta de precios">
+<svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16"></rect><rect x="14" y="4" width="5" height="16"></rect></svg>
+<svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"></path></svg>
+</button>
+<span class="ticker-label-text">MEJOR PRECIO<span class="tl-time"> · CAMBIO VS. AYER</span></span>
+</div>
+<div class="ticker-window">
+<div class="tape">
+<ul>
+<li class="quote"><b>ARROZ 1KG</b><span class="price">$4.290</span><span class="store">D1</span><span class="txt-baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 3,1%</span></li>
+<li class="quote"><b>HUEVOS AA X30</b><span class="price">$15.900</span><span class="store">OLÍMPICA</span><span class="txt-baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 1,2%</span></li>
+<li class="quote"><b>ACEITE 1L</b><span class="price">$9.850</span><span class="store">OLÍMPICA</span><span class="txt-baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 1,2%</span></li>
+<li class="quote"><b>LECHE 1,1L</b><span class="price">$4.650</span><span class="store">D1</span><span class="txt-sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 0,8%</span></li>
+<li class="quote"><b>PANELA 500G</b><span class="price">$2.700</span><span class="store">OLÍMPICA</span><span class="txt-igual"><span aria-hidden="true">=</span><span class="sr-only">sin cambio</span> 0,0%</span></li>
+<li class="quote"><b>CAFÉ 500G</b><span class="price">$18.400</span><span class="store">JUMBO</span><span class="txt-sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 5,0%</span></li>
+<li class="quote"><b>LENTEJA 500G</b><span class="price">$3.900</span><span class="store">D1</span><span class="txt-baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 2,0%</span></li>
+<li class="quote"><b>ATÚN 160G</b><span class="price">$4.900</span><span class="store">D1</span><span class="txt-baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 0,6%</span></li>
+<li class="quote"><b>AZÚCAR 1KG</b><span class="price">$4.100</span><span class="store">OLÍMPICA</span><span class="txt-sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 1,1%</span></li>
+<li class="quote"><b>PASTA 500G</b><span class="price">$2.950</span><span class="store">ÉXITO</span><span class="txt-baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 4,3%</span></li>
+</ul>
+<!-- Copia para que la cinta no tenga corte; los lectores de pantalla no la leen -->
+<ul aria-hidden="true">
+<li class="quote"><b>ARROZ 1KG</b><span class="price">$4.290</span><span class="store">D1</span><span class="txt-baja">▼ 3,1%</span></li>
+<li class="quote"><b>HUEVOS AA X30</b><span class="price">$15.900</span><span class="store">OLÍMPICA</span><span class="txt-baja">▼ 1,2%</span></li>
+<li class="quote"><b>ACEITE 1L</b><span class="price">$9.850</span><span class="store">OLÍMPICA</span><span class="txt-baja">▼ 1,2%</span></li>
+<li class="quote"><b>LECHE 1,1L</b><span class="price">$4.650</span><span class="store">D1</span><span class="txt-sube">▲ 0,8%</span></li>
+<li class="quote"><b>PANELA 500G</b><span class="price">$2.700</span><span class="store">OLÍMPICA</span><span class="txt-igual">= 0,0%</span></li>
+<li class="quote"><b>CAFÉ 500G</b><span class="price">$18.400</span><span class="store">JUMBO</span><span class="txt-sube">▲ 5,0%</span></li>
+<li class="quote"><b>LENTEJA 500G</b><span class="price">$3.900</span><span class="store">D1</span><span class="txt-baja">▼ 2,0%</span></li>
+<li class="quote"><b>ATÚN 160G</b><span class="price">$4.900</span><span class="store">D1</span><span class="txt-baja">▼ 0,6%</span></li>
+<li class="quote"><b>AZÚCAR 1KG</b><span class="price">$4.100</span><span class="store">OLÍMPICA</span><span class="txt-sube">▲ 1,1%</span></li>
+<li class="quote"><b>PASTA 500G</b><span class="price">$2.950</span><span class="store">ÉXITO</span><span class="txt-baja">▼ 4,3%</span></li>
+</ul>
 </div>
 </div>
+</section>
 
-<section style="max-width: 1320px; margin: 0 auto; padding: 72px 40px 56px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
-<div style="flex: 999 1 600px; min-width: 0">
-<p style="margin: 0 0 20px; font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2; letter-spacing: 1px">MARTES 20 OCT · CIERRE 6:00 A. M. · 4 TIENDAS · 1.240 PRODUCTOS</p>
-<h1 style="margin: 0; font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(64px, 9vw, 132px); line-height: 0.92; text-transform: uppercase; letter-spacing: -1px">La canasta<br>cotiza <span style="color: var(--accent)">en bolsa.</span></h1>
-<p style="margin: 28px 0 0; max-width: 560px; font-size: 20px; line-height: 1.5; color: #C9CDD4">Cada mañana revisamos los precios de Éxito, Jumbo, Olímpica y D1. Tú dinos qué vas a mercar y te decimos dónde sale más barato, y si conviene esperar.</p>
-<form style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; max-width: 680px">
-<label for="q" style="width: 100%; font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2">¿QUÉ VAS A MERCAR?</label>
-<input id="q" type="search" placeholder="arroz, huevos, aceite…" style="flex: 1 1 320px; min-width: 0; height: 64px; box-sizing: border-box; padding: 0 22px; background: #17191E; color: #F3F1EA; border: 2px solid #F3F1EA; font-family: 'Archivo', sans-serif; font-size: 20px">
-<button type="button" style="height: 64px; padding: 0 36px; background: var(--accent); color: #0E0F12; border: none; font-family: 'Anton', sans-serif; font-size: 26px; letter-spacing: 1px; cursor: pointer">COTIZAR</button>
+<main id="contenido">
+
+<section class="wrap hero" aria-labelledby="titulo">
+<div class="hero-copy">
+<h1 id="titulo" class="hero-title">La canasta<br>cotiza <span>en bolsa.</span></h1>
+<p class="lead hero-lead">Cada mañana revisamos los precios de Éxito, Jumbo, Olímpica y D1. Tú dinos qué vas a mercar y te decimos dónde sale más barato, y si conviene esperar.</p>
+<p class="hero-meta">Precios de hoy en Cartagena, martes 20 de octubre, revisados a las 6:00 a. m. · 4 tiendas · 1.240 productos</p>
+<form class="search" role="search" action="producto.html">
+<label class="field-label" for="q">¿Qué vas a mercar?</label>
+<div class="search-row">
+<input class="input" id="q" name="q" type="search" placeholder="arroz, huevos, aceite…" autocomplete="off">
+<button class="btn-primary" type="submit">Comparar</button>
+</div>
 </form>
-<div style="margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: #A3A8B2">
-<span>Lo más cotizado:</span>
-<a href="producto.html" style="padding: 6px 12px; border: 1px solid #3A3E48; border-radius: 999px; text-decoration: none">arroz</a>
-<a href="#" style="padding: 6px 12px; border: 1px solid #3A3E48; border-radius: 999px; text-decoration: none">huevos</a>
-<a href="#" style="padding: 6px 12px; border: 1px solid #3A3E48; border-radius: 999px; text-decoration: none">aceite</a>
-<a href="#" style="padding: 6px 12px; border: 1px solid #3A3E48; border-radius: 999px; text-decoration: none">café</a>
+<div class="chips">
+<span>Lo más buscado:</span>
+<a href="producto.html">arroz</a>
+<a href="producto.html">huevos</a>
+<a href="producto.html">aceite</a>
+<a href="producto.html">café</a>
 </div>
 </div>
 
-<div style="flex: 1 1 360px; display: flex; justify-content: center">
-<a href="producto.html" style="position: relative; width: 360px; height: 360px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: #0E0F12; transform: rotate(-8deg)">
-<svg width="360" height="360" viewBox="0 0 360 360" aria-hidden="true" style="position: absolute; inset: 0"><polygon points="180,2 200,29 226,8 238,40 269,26 273,59 306,54 301,87 334,91 320,122 352,134 331,160 358,180 331,200 352,226 320,238 334,269 301,273 306,306 273,301 269,334 238,320 226,352 200,331 180,358 160,331 134,352 122,320 91,334 87,301 54,306 59,273 26,269 40,238 8,226 29,200 2,180 29,160 8,134 40,122 26,91 59,87 54,54 87,59 91,26 122,40 134,8 160,29" style="fill: var(--accent)"></polygon></svg>
-<span style="position: relative; font-family: 'Space Mono', monospace; font-size: 15px; font-weight: 700; letter-spacing: 2px">HOY BAJÓ</span>
-<span style="position: relative; font-family: 'Anton', sans-serif; font-size: 104px; line-height: 1">−3,1%</span>
-<span style="position: relative; font-size: 18px; font-weight: 700">Arroz blanco 1 kg</span>
-<span style="position: relative; margin-top: 4px; font-family: 'Space Mono', monospace; font-size: 15px">$4.290 en D1</span>
+<div class="hero-sticker">
+<a class="starburst" href="producto.html">
+<svg viewBox="0 0 360 360" aria-hidden="true"><polygon points="180,2 200,29 226,8 238,40 269,26 273,59 306,54 301,87 334,91 320,122 352,134 331,160 358,180 331,200 352,226 320,238 334,269 301,273 306,306 273,301 269,334 238,320 226,352 200,331 180,358 160,331 134,352 122,320 91,334 87,301 54,306 59,273 26,269 40,238 8,226 29,200 2,180 29,160 8,134 40,122 26,91 59,87 54,54 87,59 91,26 122,40 134,8 160,29"></polygon></svg>
+<span class="sb-kick">LA QUE MÁS BAJÓ</span>
+<span class="sb-big">−4,3%</span>
+<span class="sb-name">Pasta spaghetti 500 g</span>
+<span class="sb-meta">$2.950 en Éxito</span>
 </a>
 </div>
 </section>
 
-<section style="max-width: 1320px; margin: 0 auto; padding: 0 40px 72px">
-<div style="display: flex; flex-wrap: wrap; gap: 0; border: 1px solid #2A2D35; background: #141519">
-<div style="flex: 1 1 340px; padding: 36px; border-right: 1px solid #2A2D35">
-<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2; letter-spacing: 1px">ÍNDICE CANASTA · 20 PRODUCTOS</p>
-<p style="margin: 14px 0 0; font-family: 'Anton', sans-serif; font-size: 84px; line-height: 1">$187.430</p>
-<p style="margin: 12px 0 0; display: inline-flex; padding: 6px 12px; background: #C6F432; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 15px; font-weight: 700">▼ 1,8% vs. semana pasada</p>
-<p style="margin: 24px 0 0; font-size: 16px; line-height: 1.55; color: #C9CDD4">Lo que costaría la canasta básica comprando cada producto donde está más barato hoy. Si este número baja, mercar está saliendo más barato.</p>
-<button type="button" style="margin-top: 24px; min-height: 44px; padding: 0 18px; background: transparent; color: #F3F1EA; border: 1px solid #F3F1EA; font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">Ver qué hay en la canasta</button>
+<section class="wrap section" aria-labelledby="indice">
+<div class="panel index-panel">
+<div class="index-figure">
+<h2 id="indice" class="index-headline">En Cartagena, mercar está saliendo <span class="txt-baja">1,8&nbsp;% más barato</span> que la semana pasada.</h2>
+<p class="index-value">$164.380</p>
+<p class="index-caption">Índice de la canasta básica · 20 productos · hoy</p>
+<p class="index-explain">Lo que costarían 20 productos básicos de una familia comprando cada uno donde está más barato hoy. Si este número baja, mercar está saliendo más barato. No es tu lista: tu lista está en <a href="canasta.html">Mi canasta</a>.</p>
+<a class="btn" href="#">Ver los 20 productos del índice</a>
 </div>
-<div style="flex: 999 1 560px; min-width: 0; padding: 36px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
-<p style="margin: 0; font-size: 15px; font-weight: 600">Últimos 30 días</p>
-<div role="group" aria-label="Rango" style="display: flex; gap: 6px; font-family: 'Space Mono', monospace">
-<button type="button" style="min-height: 36px; padding: 0 12px; background: transparent; color: #A3A8B2; border: 1px solid #3A3E48; font-family: 'Space Mono', monospace; font-size: 13px">7D</button>
-<button type="button" aria-pressed="true" style="min-height: 36px; padding: 0 12px; background: #F3F1EA; color: #0E0F12; border: 1px solid #F3F1EA; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700">30D</button>
-<button type="button" style="min-height: 36px; padding: 0 12px; background: transparent; color: #A3A8B2; border: 1px solid #3A3E48; font-family: 'Space Mono', monospace; font-size: 13px">90D</button>
-<button type="button" style="min-height: 36px; padding: 0 12px; background: transparent; color: #A3A8B2; border: 1px solid #3A3E48; font-family: 'Space Mono', monospace; font-size: 13px">1A</button>
+<div class="index-chart">
+<div class="index-chart-head">
+<h3 class="chart-title">Cómo se ha movido</h3>
+<fieldset class="segmented">
+<legend class="sr-only">Periodo</legend>
+<label><input type="radio" name="rango" value="7"><span>7 días</span></label>
+<label><input type="radio" name="rango" value="30" checked><span>30 días</span></label>
+<label><input type="radio" name="rango" value="90"><span>90 días</span></label>
+<label><input type="radio" name="rango" value="365"><span>1 año</span></label>
+</fieldset>
 </div>
-</div>
-<svg viewBox="-10 -10 700 250" role="img" aria-label="El índice canasta bajó de cerca de 191 mil a 187 mil pesos en 30 días" style="display: block; width: 100%; height: auto; margin-top: 20px">
+<svg class="chart chart-desktop" viewBox="-10 -14 710 260" role="img" aria-label="En los últimos 30 días el índice de la canasta básica bajó de cerca de 167 mil a 164 mil pesos.">
 <line x1="0" y1="0" x2="640" y2="0" stroke="#2A2D35" stroke-dasharray="4 6"></line>
 <line x1="0" y1="100" x2="640" y2="100" stroke="#2A2D35" stroke-dasharray="4 6"></line>
-<line x1="0" y1="200" x2="640" y2="200" stroke="#3A3E48"></line>
-<polyline points="0,70 22,77 44,69 66,80 88,86 110,76 132,60 154,67 177,70 199,92 221,84 243,95 265,102 287,106 309,105 331,82 353,88 375,91 397,94 419,118 441,117 463,108 486,106 508,104 530,106 552,137 574,121 596,121 618,129 640,144" fill="none" stroke="#C6F432" stroke-width="3" stroke-linejoin="round"></polyline>
-<circle cx="640" cy="144" r="7" fill="#C6F432"></circle>
-<text x="652" y="148" fill="#F3F1EA" font-family="Space Mono, monospace" font-size="13">hoy</text>
-<text x="0" y="228" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="13">20 SEP</text>
-<text x="640" y="228" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="13" text-anchor="end">20 OCT</text>
-<text x="4" y="-2" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="12" dominant-baseline="hanging" dy="6">$194K</text>
-<text x="4" y="196" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="12">$184K</text>
+<line x1="0" y1="200" x2="640" y2="200" stroke="#646A75"></line>
+<polyline points="0,70 22,77 44,69 66,80 88,86 110,76 132,60 154,67 177,70 199,92 221,84 243,95 265,102 287,106 309,105 331,82 353,88 375,91 397,94 419,118 441,117 463,108 486,106 508,92 530,106 552,137 574,121 596,121 618,140 640,152" fill="none" stroke="#45E77A" stroke-width="3" stroke-linejoin="round"></polyline>
+<circle cx="640" cy="152" r="7" fill="#45E77A"></circle>
+<text x="652" y="156" fill="#F3F1EA" font-family="Space Mono, monospace" font-size="12">hoy</text>
+<text x="0" y="234" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="12">20 SEP</text>
+<text x="640" y="234" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="12" text-anchor="end">20 OCT</text>
+<text x="4" y="-2" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="12" dominant-baseline="hanging" dy="6">$172 mil</text>
+<text x="4" y="196" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="12">$162 mil</text>
 </svg>
+<svg class="chart chart-mobile" viewBox="-4 -8 330 190" role="img" aria-label="En los últimos 30 días el índice de la canasta básica bajó de cerca de 167 mil a 164 mil pesos.">
+<line x1="0" y1="0" x2="280" y2="0" stroke="#2A2D35" stroke-dasharray="4 6"></line>
+<line x1="0" y1="150" x2="280" y2="150" stroke="#646A75"></line>
+<polyline points="0,53 10,58 19,52 29,60 39,65 48,57 58,45 67,50 77,53 87,69 97,63 106,71 116,77 126,80 135,79 145,62 154,66 164,68 174,71 183,89 193,88 203,81 213,80 222,69 232,80 242,103 251,91 261,91 270,105 280,114" fill="none" stroke="#45E77A" stroke-width="3" stroke-linejoin="round"></polyline>
+<circle cx="280" cy="114" r="6" fill="#45E77A"></circle>
+<text x="290" y="119" fill="#F3F1EA" font-family="Space Mono, monospace" font-size="13">hoy</text>
+<text x="0" y="174" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="13">20 SEP</text>
+<text x="280" y="174" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="13" text-anchor="end">20 OCT</text>
+<text x="2" y="16" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="13">$172 mil</text>
+<text x="2" y="144" fill="#A3A8B2" font-family="Space Mono, monospace" font-size="13">$162 mil</text>
+</svg>
+<p class="chart-note">El eje no empieza en cero, para que se vea el movimiento: la baja de la semana es de 1,8&nbsp;%.</p>
 </div>
 </div>
 </section>
 
-<section style="max-width: 1320px; margin: 0 auto; padding: 0 40px 72px">
-<h2 style="margin: 0 0 28px; font-family: 'Anton', sans-serif; font-weight: 400; font-size: 56px; line-height: 1; text-transform: uppercase">Lo que se movió hoy</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 24px">
-<div style="flex: 1 1 480px; min-width: 0; border-top: 6px solid #C6F432; background: #141519">
-<div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 24px; border-bottom: 1px solid #2A2D35">
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">▼ Bajaron</h3>
-<span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2">buen momento para comprar</span>
+<section class="wrap section" aria-labelledby="movio">
+<div class="section-head">
+<h2 id="movio" class="display-2">Lo que se movió hoy</h2>
+<p class="section-note">Cambios frente a ayer en cada tienda. Un producto puede subir en una y bajar en otra.</p>
+</div>
+<div class="movers">
+
+<div class="panel movers-col baja-col">
+<div class="row-head">
+<h3><span aria-hidden="true">▼</span> Bajaron</h3>
+</div>
+<ul>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Pasta spaghetti 500 g</span><span class="mover-store">Éxito · $5.900 el kilo</span></a>
+<span class="mover-price">$2.950</span>
+<span class="delta baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 4,3%</span>
+<button type="button" class="icon-btn" data-add="Pasta spaghetti 500 g" aria-label="Agregar Pasta spaghetti 500 g a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Arroz blanco 1 kg</span><span class="mover-store">D1 · $4.290 el kilo</span></a>
+<span class="mover-price">$4.290</span>
+<span class="delta baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 3,1%</span>
+<button type="button" class="icon-btn" data-add="Arroz blanco 1 kg" aria-label="Agregar Arroz blanco 1 kg a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Lenteja 500 g</span><span class="mover-store">D1 · $7.800 el kilo</span></a>
+<span class="mover-price">$3.900</span>
+<span class="delta baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 2,0%</span>
+<button type="button" class="icon-btn" data-add="Lenteja 500 g" aria-label="Agregar Lenteja 500 g a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Aceite vegetal 1 L</span><span class="mover-store">Olímpica · $9.850 el litro</span></a>
+<span class="mover-price">$9.850</span>
+<span class="delta baja"><span aria-hidden="true">▼</span><span class="sr-only">bajó</span> 1,2%</span>
+<button type="button" class="icon-btn" data-add="Aceite vegetal 1 L" aria-label="Agregar Aceite vegetal 1 L a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+</ul>
 </div>
 
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Pasta spaghetti 500 g</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">Éxito</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$2.950</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #C6F432; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▼ 4,3%</span>
-</a>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Arroz blanco 1 kg</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">D1</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$4.290</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #C6F432; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▼ 3,1%</span>
-</a>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Lenteja 500 g</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">Olímpica</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$3.990</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #C6F432; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▼ 2,0%</span>
-</a>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Aceite vegetal 1 L</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">Jumbo</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$9.850</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #C6F432; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▼ 1,2%</span>
-</a>
-
+<div class="panel movers-col sube-col">
+<div class="row-head">
+<h3><span aria-hidden="true">▲</span> Subieron</h3>
 </div>
-<div style="flex: 1 1 480px; min-width: 0; border-top: 6px solid #FF6A2B; background: #141519">
-<div style="display: flex; justify-content: space-between; align-items: baseline; padding: 20px 24px; border-bottom: 1px solid #2A2D35">
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">▲ Subieron</h3>
-<span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2">mejor comparar antes</span>
-</div>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Café molido 500 g</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">Jumbo</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$18.400</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #FF6A2B; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▲ 5,0%</span>
-</a>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Huevos AA x30</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">Éxito</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$16.900</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #FF6A2B; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▲ 2,4%</span>
-</a>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Azúcar 1 kg</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">Olímpica</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$4.100</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #FF6A2B; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▲ 1,1%</span>
-</a>
-
-<a href="producto.html" style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 18px 24px; border-bottom: 1px solid #2A2D35; text-decoration: none">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Leche entera 1,1 L</span><span style="display: block; margin-top: 4px; font-size: 14px; color: #A3A8B2">D1</span></span>
-<span style="font-family: 'Space Mono', monospace; font-size: 17px">$4.650</span>
-<span style="min-width: 84px; text-align: center; padding: 6px 10px; background: #FF6A2B; color: #0E0F12; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700">▲ 0,8%</span>
-</a>
-
-</div>
-</div>
-</section>
-
-<section style="max-width: 1320px; margin: 0 auto; padding: 0 40px 80px">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px">
-<h2 style="margin: 0; font-family: 'Anton', sans-serif; font-weight: 400; font-size: 56px; line-height: 1; text-transform: uppercase">¿Dónde sale más barata la canasta?</h2>
-<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2">Los mismos 20 productos, comprados todos en la misma tienda</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-
-<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 150px; align-items: center; gap: 20px">
-<span style="font-family: 'Anton', sans-serif; font-size: 30px; text-transform: uppercase">D1</span>
-<div style="height: 52px; background: #17191E">
-<div style="width: 83%; height: 100%; background: var(--accent); display: flex; align-items: center; justify-content: flex-end; padding-right: 16px; box-sizing: border-box; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #0E0F12">LA MÁS BARATA</div>
-</div>
-<span style="font-family: 'Space Mono', monospace; font-size: 20px; text-align: right">$171.200</span>
-</div>
-
-<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 150px; align-items: center; gap: 20px">
-<span style="font-family: 'Anton', sans-serif; font-size: 30px; text-transform: uppercase">Olímpica</span>
-<div style="height: 52px; background: #17191E">
-<div style="width: 91%; height: 100%; background: #8E939C; display: flex; align-items: center; justify-content: flex-end; padding-right: 16px; box-sizing: border-box; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #0E0F12">+$15.700</div>
-</div>
-<span style="font-family: 'Space Mono', monospace; font-size: 20px; text-align: right">$186.900</span>
-</div>
-
-<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 150px; align-items: center; gap: 20px">
-<span style="font-family: 'Anton', sans-serif; font-size: 30px; text-transform: uppercase">Éxito</span>
-<div style="height: 52px; background: #17191E">
-<div style="width: 93%; height: 100%; background: #8E939C; display: flex; align-items: center; justify-content: flex-end; padding-right: 16px; box-sizing: border-box; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #0E0F12">+$21.100</div>
-</div>
-<span style="font-family: 'Space Mono', monospace; font-size: 20px; text-align: right">$192.300</span>
-</div>
-
-<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr) 150px; align-items: center; gap: 20px">
-<span style="font-family: 'Anton', sans-serif; font-size: 30px; text-transform: uppercase">Jumbo</span>
-<div style="height: 52px; background: #17191E">
-<div style="width: 100%; height: 100%; background: #8E939C; display: flex; align-items: center; justify-content: flex-end; padding-right: 16px; box-sizing: border-box; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #0E0F12">+$34.600</div>
-</div>
-<span style="font-family: 'Space Mono', monospace; font-size: 20px; text-align: right">$205.800</span>
+<ul>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Café molido 500 g</span><span class="mover-store">Jumbo · $36.800 el kilo</span></a>
+<span class="mover-price">$18.400</span>
+<span class="delta sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 5,0%</span>
+<button type="button" class="icon-btn" data-add="Café molido 500 g" aria-label="Agregar Café molido 500 g a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Huevos AA x30</span><span class="mover-store">Éxito · $563 cada uno</span></a>
+<span class="mover-price">$16.900</span>
+<span class="delta sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 2,4%</span>
+<button type="button" class="icon-btn" data-add="Huevos AA x30" aria-label="Agregar Huevos AA x30 a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Azúcar 1 kg</span><span class="mover-store">Olímpica · $4.100 el kilo</span></a>
+<span class="mover-price">$4.100</span>
+<span class="delta sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 1,1%</span>
+<button type="button" class="icon-btn" data-add="Azúcar 1 kg" aria-label="Agregar Azúcar 1 kg a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+<li class="mover">
+<a href="producto.html"><span class="mover-name">Leche entera 1,1 L</span><span class="mover-store">D1 · $4.227 el litro</span></a>
+<span class="mover-price">$4.650</span>
+<span class="delta sube"><span aria-hidden="true">▲</span><span class="sr-only">subió</span> 0,8%</span>
+<button type="button" class="icon-btn" data-add="Leche entera 1,1 L" aria-label="Agregar Leche entera 1,1 L a mi canasta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</li>
+</ul>
 </div>
 
 </div>
 </section>
 
-<section style="border-top: 1px solid #2A2D35; border-bottom: 1px solid #2A2D35; background: #121318">
-<div style="max-width: 1320px; margin: 0 auto; padding: 64px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px">
-<div>
-<span style="font-family: 'Anton', sans-serif; font-size: 96px; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--accent)">01</span>
-<h3 style="margin: 12px 0 8px; font-size: 22px; font-weight: 700">Recogemos los precios</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #C9CDD4">Un robot visita las tiendas en línea cada mañana, despacio y respetando sus reglas, y anota cada precio.</p>
+<section class="wrap section" aria-labelledby="ranking">
+<div class="section-head">
+<h2 id="ranking" class="display-2">¿Dónde sale más barata la canasta básica en Cartagena?</h2>
+<p class="section-note">Los 20 productos del índice, comprados todos en una sola tienda. Comprando cada uno donde está más barato salen en $164.380: ese es el índice. D1 es la más barata, pero no tiene todo: si tu lista lleva café, tendrás que pasar por otra tienda.</p>
 </div>
-<div>
-<span style="font-family: 'Anton', sans-serif; font-size: 96px; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--accent)">02</span>
-<h3 style="margin: 12px 0 8px; font-size: 22px; font-weight: 700">Emparejamos productos</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #C9CDD4">«ARROZ DIANA X 1000G» y «Arroz Diana 1 kg» son lo mismo. Los juntamos y comparamos por precio por kilo.</p>
-</div>
-<div>
-<span style="font-family: 'Anton', sans-serif; font-size: 96px; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--accent)">03</span>
-<h3 style="margin: 12px 0 8px; font-size: 22px; font-weight: 700">Te avisamos cuando baja</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #C9CDD4">Pon un precio objetivo y te llega un mensaje el día que algún supermercado lo cumpla.</p>
-</div>
+<ol class="ranking">
+<li class="rank-row best">
+<span class="rank-store">D1</span>
+<span class="rank-track"><span class="rank-bar" style="width: 83%"><span class="rank-note">La más barata</span></span></span>
+<span class="rank-total">$171.200</span>
+</li>
+<li class="rank-row">
+<span class="rank-store">Olímpica</span>
+<span class="rank-track"><span class="rank-bar" style="width: 91%"><span class="rank-note">+$15.700</span></span></span>
+<span class="rank-total">$186.900</span>
+</li>
+<li class="rank-row">
+<span class="rank-store">Éxito</span>
+<span class="rank-track"><span class="rank-bar" style="width: 93%"><span class="rank-note">+$21.100</span></span></span>
+<span class="rank-total">$192.300</span>
+</li>
+<li class="rank-row">
+<span class="rank-store">Jumbo</span>
+<span class="rank-track"><span class="rank-bar" style="width: 100%"><span class="rank-note">+$34.600</span></span></span>
+<span class="rank-total">$205.800</span>
+</li>
+</ol>
+</section>
+
+<section class="steps-band" aria-labelledby="funciona">
+<div class="wrap">
+<h2 id="funciona" class="display-2">Así funciona</h2>
+<ol class="steps">
+<li>
+<span class="step-num" aria-hidden="true">01</span>
+<h3>Recogemos los precios</h3>
+<p>Un robot visita las tiendas en línea cada mañana, despacio y respetando sus reglas, y anota cada precio.</p>
+</li>
+<li>
+<span class="step-num" aria-hidden="true">02</span>
+<h3>Emparejamos productos</h3>
+<p>«ARROZ DIANA X 1000G» y «Arroz Diana 1 kg» son lo mismo. Los juntamos y, para ahorrar más, también comparamos marcas equivalentes por precio por kilo.</p>
+</li>
+<li>
+<span class="step-num" aria-hidden="true">03</span>
+<h3>Te avisamos cuando baja</h3>
+<p>Pon un precio objetivo y te llega un mensaje por Telegram o correo el día que algún supermercado lo cumpla.</p>
+</li>
+</ol>
 </div>
 </section>
 
-<footer style="max-width: 1320px; margin: 0 auto; padding: 32px 40px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #A3A8B2">
-<span>Precios tomados de las tiendas en línea. Pueden variar en el punto físico.</span>
-<span style="font-family: 'Space Mono', monospace">Proyecto de aprendizaje · sin afiliación con ninguna cadena</span>
+</main>
+
+<footer class="site-footer">
+<span>Precios tomados de las tiendas en línea a las 6:00 a. m. Pueden variar en el punto físico.</span>
+<span class="mono">Proyecto independiente · sin afiliación con ninguna cadena</span>
 </footer>
 
-</div>
+<nav class="tabbar" aria-label="Principal (móvil)">
+<a href="index.html" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Hoy</a>
+<a href="producto.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Productos</a>
+<a href="canasta.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Mi canasta</a>
+<a href="alertas.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>Alertas</a>
+</nav>
+
+<script src="app.js" defer></script>
 </body>
 </html>

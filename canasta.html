@@ -10,208 +10,238 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="background: #0E0F12; color: #F3F1EA; font-family: 'Archivo', system-ui, sans-serif; min-height: 100vh">
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-<header style="max-width: 1320px; margin: 0 auto; padding: 22px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #2A2D35">
-<a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F3F1EA">
-<span style="font-family: 'Anton', sans-serif; font-size: 36px; letter-spacing: 1px; line-height: 1">MERCADO</span>
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: #0E0F12; background: var(--accent); padding: 4px 8px; transform: rotate(-4deg)">BOLSA DE LA CANASTA</span>
+<div class="header-band">
+<header class="site-header">
+<a class="brand" href="index.html">
+<span class="brand-name">MERCADO</span>
+<span class="brand-tag">BOLSA DE LA CANASTA</span>
 </a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 15px; font-weight: 600">
-<a href="index.html" style="text-decoration: none; color: #A3A8B2">Hoy</a>
-<a href="producto.html" style="text-decoration: none; color: #A3A8B2">Productos</a>
-<a href="#" aria-current="page" style="text-decoration: none; border-bottom: 3px solid var(--accent); padding-bottom: 4px">Mi canasta</a>
-<a href="alertas.html" style="text-decoration: none; color: #A3A8B2">Alertas</a>
+<nav class="nav" aria-label="Principal">
+<a href="index.html">Hoy</a>
+<a href="producto.html">Productos</a>
+<a href="canasta.html" aria-current="page">Mi canasta</a>
+<a href="alertas.html">Alertas</a>
 </nav>
-<span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2">Precios de hoy, 6:00 a. m.</span>
-</header>
-
-<main style="max-width: 1320px; margin: 0 auto; padding: 48px 40px 80px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
-
-<section aria-labelledby="lista" style="flex: 999 1 560px; min-width: 0">
-<h1 id="lista" style="margin: 0; font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(56px, 7vw, 96px); line-height: 0.95; text-transform: uppercase">Mi canasta</h1>
-<p style="margin: 14px 0 0; font-size: 18px; line-height: 1.5; color: #C9CDD4; max-width: 560px">Arma tu lista y te armamos el plan: dónde comprar cada cosa para gastar menos sin recorrer toda la ciudad.</p>
-
-<form style="margin-top: 32px; display: flex; gap: 10px">
-<label for="nuevo" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Agregar producto</label>
-<input id="nuevo" type="text" placeholder="Agregar producto… (ej. plátano, queso costeño)" style="flex: 1 1 auto; min-width: 0; height: 56px; box-sizing: border-box; padding: 0 18px; background: #17191E; color: #F3F1EA; border: 2px solid #F3F1EA; font-family: 'Archivo', sans-serif; font-size: 17px">
-<button type="button" aria-label="Agregar" style="width: 56px; height: 56px; background: var(--accent); color: #0E0F12; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+<div class="header-tool">
+<button type="button" class="pill-button city" aria-label="Cartagena, precios de hoy a las 6:00 a. m. Cambiar ciudad">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+<span>Cartagena</span><span class="city-time">hoy 6:00 a. m.</span>
 </button>
+</div>
+</header>
+</div>
+
+<main id="contenido" class="wrap basket-page">
+
+<section class="basket-list" aria-labelledby="lista">
+<h1 id="lista" class="display-1">Mi canasta</h1>
+<p class="lead basket-lead">Tu lista personal. Agrega lo que vas a mercar y te armamos el plan: dónde comprar cada cosa para gastar menos sin recorrer toda la ciudad.</p>
+
+<form class="basket-add">
+<label class="field-label" for="nuevo">Agregar producto</label>
+<div class="basket-add-row">
+<input class="input" id="nuevo" name="nuevo" type="text" placeholder="ej. plátano, queso costeño" autocomplete="off">
+<button type="submit" class="add-btn" aria-label="Agregar a la lista"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
 </form>
 
-<ul style="margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid #2A2D35">
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Arroz blanco 1 kg</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #C6F432">D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">2</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$8.580</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Huevos AA x30</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #C6F432">D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">1</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$16.200</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Leche entera 1,1 L</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #C6F432">D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">6</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$27.900</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Lenteja 500 g</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #C6F432">D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">2</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$7.800</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Atún en aceite 160 g</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #C6F432">D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">3</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$14.700</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Pasta spaghetti 500 g</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #C6F432">D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">2</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$6.200</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Aceite vegetal 1 L</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #7CC4FF">Olímpica</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">1</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$9.850</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Panela 500 g</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #7CC4FF">Olímpica</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">2</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$5.400</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Café molido 500 g</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #7CC4FF">Olímpica · no lo hay en D1</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">1</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$18.950</span>
-</li>
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 1px solid #2A2D35">
-<span><span style="display: block; font-size: 17px; font-weight: 600">Azúcar 1 kg</span><span style="display: block; margin-top: 3px; font-family: 'Space Mono', monospace; font-size: 13px; color: #7CC4FF">Olímpica</span></span>
-<span style="display: flex; align-items: center; border: 1px solid #3A3E48">
-<button type="button" aria-label="Quitar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">−</button>
-<span style="min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700">1</span>
-<button type="button" aria-label="Agregar uno" style="width: 44px; height: 44px; background: transparent; color: #F3F1EA; border: none; font-size: 20px; cursor: pointer">+</button>
-</span>
-<span style="min-width: 92px; text-align: right; font-family: 'Space Mono', monospace; font-size: 16px">$4.100</span>
-</li>
-
-</ul>
-
-<fieldset style="margin: 36px 0 0; padding: 0; border: none">
-<legend style="padding: 0; font-family: 'Space Mono', monospace; font-size: 13px; color: #A3A8B2; letter-spacing: 1px">¿A CUÁNTAS TIENDAS ESTÁS DISPUESTO A IR?</legend>
-<div style="margin-top: 12px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
-<button type="button" style="min-height: 72px; background: transparent; color: #F3F1EA; border: 2px solid #3A3E48; cursor: pointer; font-family: 'Archivo', sans-serif; font-size: 15px"><span style="display: block; font-family: 'Anton', sans-serif; font-size: 30px">1</span>todo en una</button>
-<button type="button" aria-pressed="true" style="min-height: 72px; background: #F3F1EA; color: #0E0F12; border: 2px solid #F3F1EA; cursor: pointer; font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 700"><span style="display: block; font-family: 'Anton', sans-serif; font-size: 30px">2</span>el punto medio</button>
-<button type="button" style="min-height: 72px; background: transparent; color: #F3F1EA; border: 2px solid #3A3E48; cursor: pointer; font-family: 'Archivo', sans-serif; font-size: 15px"><span style="display: block; font-family: 'Anton', sans-serif; font-size: 30px">3</span>cazador de ofertas</button>
+<fieldset class="plan">
+<legend class="field-label">¿A cuántas tiendas quieres ir?</legend>
+<div class="plan-options">
+<label><input type="radio" name="plan" value="1" data-anuncio="Plan de 1 tienda: todo en Olímpica, total $125.900."><span><b>1</b>todo en una<small>Olímpica · $125.900</small></span></label>
+<label><input type="radio" name="plan" value="2" checked data-anuncio="Plan de 2 tiendas: total $119.380, ahorras $6.520."><span><b>2</b>el punto medio<small>ahorras $6.520</small></span></label>
+<label><input type="radio" name="plan" value="3" data-anuncio="Plan de 3 tiendas: suma Jumbo para el café, total $118.830, ahorras $7.070."><span><b>3</b>cazador de ofertas<small>ahorras $7.070</small></span></label>
 </div>
 </fieldset>
+<p class="sr-only" id="plan-anuncio" aria-live="polite"></p>
+
+<section class="store-group" aria-labelledby="g-d1">
+<div class="store-head">
+<h2 id="g-d1">D1</h2>
+<span class="mono">5 productos · $65.180</span>
+</div>
+<ul>
+<li class="basket-row" data-unit="4290">
+<div class="br-info"><span class="br-name">Arroz blanco 1 kg</span><span class="br-unit">$4.290 c/u · $4.290 el kilo</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Arroz blanco 1 kg">
+<button type="button" aria-label="Quitar uno de Arroz blanco 1 kg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">2</output>
+<button type="button" aria-label="Agregar uno de Arroz blanco 1 kg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$8.580</span>
+<button type="button" class="br-remove" aria-label="Sacar Arroz blanco 1 kg de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="4650">
+<div class="br-info"><span class="br-name">Leche entera 1,1 L</span><span class="br-unit">$4.650 c/u · $4.227 el litro</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Leche entera 1,1 L">
+<button type="button" aria-label="Quitar uno de Leche entera 1,1 L"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">6</output>
+<button type="button" aria-label="Agregar uno de Leche entera 1,1 L"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$27.900</span>
+<button type="button" class="br-remove" aria-label="Sacar Leche entera 1,1 L de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="3900">
+<div class="br-info"><span class="br-name">Lenteja 500 g</span><span class="br-unit">$3.900 c/u · $7.800 el kilo</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Lenteja 500 g">
+<button type="button" aria-label="Quitar uno de Lenteja 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">2</output>
+<button type="button" aria-label="Agregar uno de Lenteja 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$7.800</span>
+<button type="button" class="br-remove" aria-label="Sacar Lenteja 500 g de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="4900">
+<div class="br-info"><span class="br-name">Atún en aceite 160 g</span><span class="br-unit">$4.900 c/u · $30.625 el kilo</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Atún en aceite 160 g">
+<button type="button" aria-label="Quitar uno de Atún en aceite 160 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">3</output>
+<button type="button" aria-label="Agregar uno de Atún en aceite 160 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$14.700</span>
+<button type="button" class="br-remove" aria-label="Sacar Atún en aceite 160 g de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="3100">
+<div class="br-info"><span class="br-name">Pasta spaghetti 500 g</span><span class="br-unit">$3.100 c/u · $6.200 el kilo</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Pasta spaghetti 500 g">
+<button type="button" aria-label="Quitar uno de Pasta spaghetti 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">2</output>
+<button type="button" aria-label="Agregar uno de Pasta spaghetti 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$6.200</span>
+<button type="button" class="br-remove" aria-label="Sacar Pasta spaghetti 500 g de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+</ul>
 </section>
 
-<section aria-labelledby="tirilla" style="flex: 1 1 400px; max-width: 460px; min-width: 0; position: relative; transform: rotate(1.5deg)">
-<svg width="100%" height="14" aria-hidden="true" style="display: block"><defs><pattern id="ztop" width="20" height="14" patternUnits="userSpaceOnUse"><polygon points="0,14 10,0 20,14" fill="#FBFAF6"></polygon></pattern></defs><rect width="100%" height="14" fill="url(#ztop)"></rect></svg>
-<div style="background: #FBFAF6; color: #17191E; padding: 24px 32px 28px; font-family: 'Space Mono', monospace; font-size: 15px">
-<p style="margin: 0; text-align: center; font-family: 'Anton', sans-serif; font-size: 34px; letter-spacing: 2px">MERCADO</p>
-<h2 id="tirilla" style="margin: 2px 0 0; text-align: center; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 2px">TIRILLA DE AHORRO</h2>
-<p style="margin: 6px 0 0; text-align: center; font-size: 13px; color: #4A4E57">20/10/2026 · PLAN 2 TIENDAS</p>
-<p style="margin: 16px 0; color: #4A4E57; overflow: hidden; white-space: nowrap" aria-hidden="true">- - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<section class="store-group" aria-labelledby="g-ol">
+<div class="store-head">
+<h2 id="g-ol">Olímpica</h2>
+<span class="mono">5 productos · $54.200</span>
+</div>
+<ul>
+<li class="basket-row" data-unit="15900">
+<div class="br-info"><span class="br-name">Huevos AA x30</span><span class="br-unit">$15.900 c/u · $530 cada uno</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Huevos AA x30">
+<button type="button" aria-label="Quitar uno de Huevos AA x30"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">1</output>
+<button type="button" aria-label="Agregar uno de Huevos AA x30"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$15.900</span>
+<button type="button" class="br-remove" aria-label="Sacar Huevos AA x30 de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="9850">
+<div class="br-info"><span class="br-name">Aceite vegetal 1 L</span><span class="br-unit">$9.850 c/u · $9.850 el litro</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Aceite vegetal 1 L">
+<button type="button" aria-label="Quitar uno de Aceite vegetal 1 L"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">1</output>
+<button type="button" aria-label="Agregar uno de Aceite vegetal 1 L"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$9.850</span>
+<button type="button" class="br-remove" aria-label="Sacar Aceite vegetal 1 L de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="2700">
+<div class="br-info"><span class="br-name">Panela 500 g</span><span class="br-unit">$2.700 c/u · $5.400 el kilo</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Panela 500 g">
+<button type="button" aria-label="Quitar uno de Panela 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">2</output>
+<button type="button" aria-label="Agregar uno de Panela 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$5.400</span>
+<button type="button" class="br-remove" aria-label="Sacar Panela 500 g de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="18950">
+<div class="br-info"><span class="br-name">Café molido 500 g</span><span class="br-unit">$18.950 c/u · $37.900 el kilo · <span class="row-note">no lo hay en D1</span></span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Café molido 500 g">
+<button type="button" aria-label="Quitar uno de Café molido 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">1</output>
+<button type="button" aria-label="Agregar uno de Café molido 500 g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$18.950</span>
+<button type="button" class="br-remove" aria-label="Sacar Café molido 500 g de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+<li class="basket-row" data-unit="4100">
+<div class="br-info"><span class="br-name">Azúcar 1 kg</span><span class="br-unit">$4.100 c/u · $4.100 el kilo</span></div>
+<div class="stepper" role="group" aria-label="Cantidad de Azúcar 1 kg">
+<button type="button" aria-label="Quitar uno de Azúcar 1 kg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite">1</output>
+<button type="button" aria-label="Agregar uno de Azúcar 1 kg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<span class="br-total">$4.100</span>
+<button type="button" class="br-remove" aria-label="Sacar Azúcar 1 kg de la lista"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</li>
+</ul>
+</section>
 
+<p class="disclaimer basket-note">Precios en línea de hoy, 6:00 a. m. En la tienda física pueden variar.</p>
+</section>
 
-<div style="margin-bottom: 18px">
-<p style="margin: 0 0 8px; display: flex; justify-content: space-between; font-weight: 700"><span>» D1</span><span>6 productos</span></p>
+<section class="tirilla-wrap" id="tirilla" aria-labelledby="tirilla-t">
+<svg class="zigzag" width="100%" height="14" aria-hidden="true"><defs><pattern id="ztop" width="20" height="14" patternUnits="userSpaceOnUse"><polygon points="0,14 10,0 20,14" fill="#FBFAF6"></polygon></pattern></defs><rect width="100%" height="14" fill="url(#ztop)"></rect></svg>
+<div class="tirilla">
+<p class="t-brand">MERCADO</p>
+<h2 id="tirilla-t" class="t-title">TIRILLA DE AHORRO</h2>
+<p class="t-sub">20/10/2026 · 6:00 A. M. · CARTAGENA</p>
+<p class="t-sub t-plan">PLAN 2 TIENDAS</p>
+<p class="t-rule" aria-hidden="true">- - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
 
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>2 × Arroz blanco 1 kg</span><span>8.580</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>1 × Huevos AA x30</span><span>16.200</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>6 × Leche entera 1,1 L</span><span>27.900</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>2 × Lenteja 500 g</span><span>7.800</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>3 × Atún 160 g</span><span>14.700</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>2 × Pasta 500 g</span><span>6.200</span></p>
-
-<p style="margin: 6px 0 0; display: flex; justify-content: space-between; border-top: 1px dashed #8E939C; padding-top: 6px"><span>SUBTOTAL</span><span style="font-weight: 700">$81.380</span></p>
+<div class="t-group">
+<p class="t-store"><span>» D1</span><span>5 productos</span></p>
+<p class="t-line"><span>2 × Arroz blanco 1 kg</span><span>8.580</span></p>
+<p class="t-line"><span>6 × Leche entera 1,1 L</span><span>27.900</span></p>
+<p class="t-line"><span>2 × Lenteja 500 g</span><span>7.800</span></p>
+<p class="t-line"><span>3 × Atún 160 g</span><span>14.700</span></p>
+<p class="t-line"><span>2 × Pasta 500 g</span><span>6.200</span></p>
+<p class="t-sub-total"><span>SUBTOTAL</span><span>$65.180</span></p>
 </div>
 
-<div style="margin-bottom: 18px">
-<p style="margin: 0 0 8px; display: flex; justify-content: space-between; font-weight: 700"><span>» OLÍMPICA</span><span>4 productos</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>1 × Aceite vegetal 1 L</span><span>9.850</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>2 × Panela 500 g</span><span>5.400</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>1 × Café molido 500 g</span><span>18.950</span></p>
-
-<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; line-height: 1.7"><span>1 × Azúcar 1 kg</span><span>4.100</span></p>
-
-<p style="margin: 6px 0 0; display: flex; justify-content: space-between; border-top: 1px dashed #8E939C; padding-top: 6px"><span>SUBTOTAL</span><span style="font-weight: 700">$38.300</span></p>
+<div class="t-group">
+<p class="t-store"><span>» OLÍMPICA</span><span>5 productos</span></p>
+<p class="t-line"><span>1 × Huevos AA x30</span><span>15.900</span></p>
+<p class="t-line"><span>1 × Aceite vegetal 1 L</span><span>9.850</span></p>
+<p class="t-line"><span>2 × Panela 500 g</span><span>5.400</span></p>
+<p class="t-line"><span>1 × Café molido 500 g</span><span>18.950</span></p>
+<p class="t-line"><span>1 × Azúcar 1 kg</span><span>4.100</span></p>
+<p class="t-sub-total"><span>SUBTOTAL</span><span>$54.200</span></p>
 </div>
 
+<p class="t-rule" aria-hidden="true">= = = = = = = = = = = = = = = = = = = = = = = = = = = =</p>
+<p class="t-total"><span>TOTAL</span><span>$119.380</span></p>
+<p class="t-compare"><span>Todo en Olímpica</span><span><s>$125.900</s></span></p>
 
-<p style="margin: 4px 0 16px; color: #4A4E57; overflow: hidden; white-space: nowrap" aria-hidden="true">= = = = = = = = = = = = = = = = = = = = = = = = = = = =</p>
-<p style="margin: 0; display: flex; justify-content: space-between; font-size: 20px; font-weight: 700"><span>TOTAL</span><span>$119.680</span></p>
-<p style="margin: 6px 0 0; display: flex; justify-content: space-between; color: #4A4E57"><span>Todo en Olímpica</span><span style="text-decoration: line-through">$125.900</span></p>
-
-<div style="margin-top: 20px; padding: 16px; background: #0E0F12; color: var(--accent); text-align: center">
-<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 2px">TE AHORRAS</p>
-<p style="margin: 2px 0 0; font-family: 'Anton', sans-serif; font-size: 64px; line-height: 1">$6.220</p>
+<div class="t-save">
+<p class="t-save-label">TE AHORRAS</p>
+<p class="t-save-value">$6.520</p>
 </div>
+<p class="t-fine">Comparado con comprar todo en Olímpica, la única tienda que tiene toda tu lista. D1 sería más barata, pero no tiene café. Si el pasaje a la segunda tienda te cuesta más de $6.520, te conviene ir a una sola.</p>
+<p class="t-fine">Precios en línea de hoy a las 6:00 a. m. En la tienda pueden variar.</p>
 
-<svg width="100%" height="56" viewBox="0 0 300 56" preserveAspectRatio="none" aria-hidden="true" style="display: block; margin-top: 22px"><g fill="#17191E"><rect x="0" y="0" width="3" height="56"></rect><rect x="6" y="0" width="1" height="56"></rect><rect x="10" y="0" width="4" height="56"></rect><rect x="17" y="0" width="2" height="56"></rect><rect x="22" y="0" width="1" height="56"></rect><rect x="26" y="0" width="3" height="56"></rect><rect x="33" y="0" width="1" height="56"></rect><rect x="37" y="0" width="5" height="56"></rect><rect x="45" y="0" width="2" height="56"></rect><rect x="50" y="0" width="1" height="56"></rect><rect x="54" y="0" width="3" height="56"></rect><rect x="60" y="0" width="2" height="56"></rect><rect x="66" y="0" width="1" height="56"></rect><rect x="70" y="0" width="4" height="56"></rect><rect x="77" y="0" width="1" height="56"></rect><rect x="81" y="0" width="2" height="56"></rect><rect x="86" y="0" width="5" height="56"></rect><rect x="94" y="0" width="1" height="56"></rect><rect x="98" y="0" width="3" height="56"></rect><rect x="104" y="0" width="2" height="56"></rect><rect x="109" y="0" width="1" height="56"></rect><rect x="113" y="0" width="4" height="56"></rect><rect x="120" y="0" width="2" height="56"></rect><rect x="125" y="0" width="1" height="56"></rect><rect x="129" y="0" width="3" height="56"></rect><rect x="135" y="0" width="5" height="56"></rect><rect x="143" y="0" width="1" height="56"></rect><rect x="147" y="0" width="2" height="56"></rect><rect x="152" y="0" width="3" height="56"></rect><rect x="158" y="0" width="1" height="56"></rect><rect x="162" y="0" width="4" height="56"></rect><rect x="169" y="0" width="2" height="56"></rect><rect x="174" y="0" width="1" height="56"></rect><rect x="178" y="0" width="5" height="56"></rect><rect x="186" y="0" width="2" height="56"></rect><rect x="191" y="0" width="1" height="56"></rect><rect x="195" y="0" width="3" height="56"></rect><rect x="201" y="0" width="1" height="56"></rect><rect x="205" y="0" width="4" height="56"></rect><rect x="212" y="0" width="2" height="56"></rect><rect x="217" y="0" width="3" height="56"></rect><rect x="223" y="0" width="1" height="56"></rect><rect x="227" y="0" width="5" height="56"></rect><rect x="235" y="0" width="2" height="56"></rect><rect x="240" y="0" width="1" height="56"></rect><rect x="244" y="0" width="3" height="56"></rect><rect x="250" y="0" width="4" height="56"></rect><rect x="257" y="0" width="1" height="56"></rect><rect x="261" y="0" width="2" height="56"></rect><rect x="266" y="0" width="5" height="56"></rect><rect x="274" y="0" width="1" height="56"></rect><rect x="278" y="0" width="3" height="56"></rect><rect x="284" y="0" width="2" height="56"></rect><rect x="289" y="0" width="1" height="56"></rect><rect x="293" y="0" width="4" height="56"></rect></g></svg>
-<p style="margin: 10px 0 0; text-align: center; font-size: 12px; color: #4A4E57">GRACIAS POR NO PAGAR DE MÁS</p>
-<button type="button" style="margin-top: 20px; width: 100%; min-height: 52px; background: transparent; color: #17191E; border: 2px solid #17191E; font-family: 'Archivo', sans-serif; font-size: 16px; font-weight: 700; cursor: pointer">Compartir lista por WhatsApp</button>
+<svg class="t-barcode" width="100%" height="56" viewBox="0 0 300 56" preserveAspectRatio="none" aria-hidden="true"><g fill="#17191E"><rect x="0" y="0" width="3" height="56"></rect><rect x="6" y="0" width="1" height="56"></rect><rect x="10" y="0" width="4" height="56"></rect><rect x="17" y="0" width="2" height="56"></rect><rect x="22" y="0" width="1" height="56"></rect><rect x="26" y="0" width="3" height="56"></rect><rect x="33" y="0" width="1" height="56"></rect><rect x="37" y="0" width="5" height="56"></rect><rect x="45" y="0" width="2" height="56"></rect><rect x="50" y="0" width="1" height="56"></rect><rect x="54" y="0" width="3" height="56"></rect><rect x="60" y="0" width="2" height="56"></rect><rect x="66" y="0" width="1" height="56"></rect><rect x="70" y="0" width="4" height="56"></rect><rect x="77" y="0" width="1" height="56"></rect><rect x="81" y="0" width="2" height="56"></rect><rect x="86" y="0" width="5" height="56"></rect><rect x="94" y="0" width="1" height="56"></rect><rect x="98" y="0" width="3" height="56"></rect><rect x="104" y="0" width="2" height="56"></rect><rect x="109" y="0" width="1" height="56"></rect><rect x="113" y="0" width="4" height="56"></rect><rect x="120" y="0" width="2" height="56"></rect><rect x="125" y="0" width="1" height="56"></rect><rect x="129" y="0" width="3" height="56"></rect><rect x="135" y="0" width="5" height="56"></rect><rect x="143" y="0" width="1" height="56"></rect><rect x="147" y="0" width="2" height="56"></rect><rect x="152" y="0" width="3" height="56"></rect><rect x="158" y="0" width="1" height="56"></rect><rect x="162" y="0" width="4" height="56"></rect><rect x="169" y="0" width="2" height="56"></rect><rect x="174" y="0" width="1" height="56"></rect><rect x="178" y="0" width="5" height="56"></rect><rect x="186" y="0" width="2" height="56"></rect><rect x="191" y="0" width="1" height="56"></rect><rect x="195" y="0" width="3" height="56"></rect><rect x="201" y="0" width="1" height="56"></rect><rect x="205" y="0" width="4" height="56"></rect><rect x="212" y="0" width="2" height="56"></rect><rect x="217" y="0" width="3" height="56"></rect><rect x="223" y="0" width="1" height="56"></rect><rect x="227" y="0" width="5" height="56"></rect><rect x="235" y="0" width="2" height="56"></rect><rect x="240" y="0" width="1" height="56"></rect><rect x="244" y="0" width="3" height="56"></rect><rect x="250" y="0" width="4" height="56"></rect><rect x="257" y="0" width="1" height="56"></rect><rect x="261" y="0" width="2" height="56"></rect><rect x="266" y="0" width="5" height="56"></rect><rect x="274" y="0" width="1" height="56"></rect><rect x="278" y="0" width="3" height="56"></rect><rect x="284" y="0" width="2" height="56"></rect><rect x="289" y="0" width="1" height="56"></rect><rect x="293" y="0" width="4" height="56"></rect></g></svg>
+<p class="t-thanks">GRACIAS POR NO PAGAR DE MÁS</p>
+<button type="button" class="t-share"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"></path><path d="M12 3v12"></path><path d="M7 8l5-5 5 5"></path></svg>Compartir lista por WhatsApp</button>
 </div>
-<svg width="100%" height="14" aria-hidden="true" style="display: block"><defs><pattern id="zbot" width="20" height="14" patternUnits="userSpaceOnUse"><polygon points="0,0 10,14 20,0" fill="#FBFAF6"></polygon></pattern></defs><rect width="100%" height="14" fill="url(#zbot)"></rect></svg>
+<svg class="zigzag" width="100%" height="14" aria-hidden="true"><defs><pattern id="zbot" width="20" height="14" patternUnits="userSpaceOnUse"><polygon points="0,0 10,14 20,0" fill="#FBFAF6"></polygon></pattern></defs><rect width="100%" height="14" fill="url(#zbot)"></rect></svg>
 </section>
 </main>
+
+<div class="basket-bar">
+<p><strong class="mono">$119.380</strong> <span class="bb-save">ahorras $6.520</span></p>
+<a href="#tirilla" class="btn">Ver tirilla</a>
 </div>
+
+<footer class="site-footer">
+<span>Precios tomados de las tiendas en línea a las 6:00 a. m. Pueden variar en el punto físico.</span>
+<span class="mono">Proyecto independiente · sin afiliación con ninguna cadena</span>
+</footer>
+
+<nav class="tabbar" aria-label="Principal (móvil)">
+<a href="index.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Hoy</a>
+<a href="producto.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Productos</a>
+<a href="canasta.html" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Mi canasta</a>
+<a href="alertas.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>Alertas</a>
+</nav>
+<script src="app.js" defer></script>
 </body>
 </html>

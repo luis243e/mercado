@@ -10,66 +10,137 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="movil">
-<div style="width: 390px; height: 844px; box-sizing: border-box; background: #0E0F12; color: #F3F1EA; font-family: 'Archivo', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+<div class="phone">
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-<header style="padding: 28px 20px 8px; display: flex; justify-content: space-between; align-items: flex-end">
+<header class="phone-head">
 <div>
-<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; color: #A3A8B2; letter-spacing: 1px">4 PRODUCTOS VIGILADOS</p>
-<h1 style="margin: 4px 0 0; font-family: 'Anton', sans-serif; font-weight: 400; font-size: 46px; line-height: 1; text-transform: uppercase">Alertas</h1>
+<h1 class="phone-title">Alertas</h1>
+<p class="phone-sub">Cartagena · vigilas <span data-alert-count>4</span> productos · te avisamos por Telegram</p>
 </div>
-<button type="button" aria-label="Nueva alerta" style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #0E0F12; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
-</button>
+<details class="new-alert">
+<summary class="fab" aria-label="Nueva alerta"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<div class="new-alert-panel">
+<form action="producto.html">
+<label class="field-label" for="vigilar">¿Qué producto quieres vigilar?</label>
+<div class="inline-row">
+<input class="input" id="vigilar" name="q" type="search" placeholder="ej. café, aceite, leche" autocomplete="off">
+<button type="submit" class="icon-btn" aria-label="Buscar producto para vigilar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg></button>
+</div>
+<div class="chips">
+<span>Sugeridos:</span>
+<a href="producto.html#alerta">leche</a>
+<a href="producto.html#alerta">azúcar</a>
+<a href="producto.html#alerta">panela</a>
+</div>
+</form>
+</div>
+</details>
 </header>
 
-<a href="producto.html" style="position: relative; align-self: center; width: 260px; height: 260px; margin: 6px 0 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: #0E0F12; transform: rotate(-6deg)">
-<svg width="260" height="260" viewBox="0 0 260 260" aria-hidden="true" style="position: absolute; inset: 0"><polygon points="130,2 146,21 166,7 176,30 199,22 202,47 227,46 223,71 246,77 236,99 257,112 240,130 257,148 236,161 246,183 223,189 227,214 202,213 199,238 176,230 166,253 146,239 130,258 114,239 94,253 84,230 61,238 58,213 33,214 37,189 14,183 24,161 3,148 20,130 3,112 24,99 14,77 37,71 33,46 58,47 61,22 84,30 94,7 114,21" style="fill: var(--accent)"></polygon></svg>
-<span style="position: relative; font-family: 'Anton', sans-serif; font-size: 48px; line-height: 1">¡BAJÓ!</span>
-<span style="position: relative; margin-top: 4px; font-size: 16px; font-weight: 700">Huevos AA x30</span>
-<span style="position: relative; font-family: 'Space Mono', monospace; font-size: 26px; font-weight: 700">$15.900</span>
-<span style="position: relative; font-family: 'Space Mono', monospace; font-size: 12px">en Olímpica · meta $16.000</span>
+<main id="contenido" class="phone-main">
+
+<section class="hit" aria-labelledby="hit-t">
+<h2 id="hit-t" class="sr-only">Alerta cumplida hoy</h2>
+<a class="starburst starburst-sm" href="producto.html">
+<svg viewBox="0 0 260 260" aria-hidden="true"><polygon points="130,2 146,21 166,7 176,30 199,22 202,47 227,46 223,71 246,77 236,99 257,112 240,130 257,148 236,161 246,183 223,189 227,214 202,213 199,238 176,230 166,253 146,239 130,258 114,239 94,253 84,230 61,238 58,213 33,214 37,189 14,183 24,161 3,148 20,130 3,112 24,99 14,77 37,71 33,46 58,47 61,22 84,30 94,7 114,21"></polygon></svg>
+<span class="sb-big">¡BAJÓ!</span>
+<span class="sb-name">Huevos AA x30</span>
+<span class="sb-price">$15.900</span>
+<span class="sb-meta">en Olímpica</span>
 </a>
+<p class="hit-note">Llegó a tu meta de $16.000 hoy a las 6:00 a. m. Ya te avisamos por Telegram.</p>
+<p class="hit-basket">Ya está en tu canasta: 1 × Huevos AA x30, ahora más barato.</p>
+<div class="hit-actions">
+<a class="btn-primary" href="canasta.html">Ver mi canasta</a>
+<a class="btn" href="producto.html">Ver producto</a>
+</div>
+</section>
 
-<p style="margin: 6px 20px 10px; text-align: center; font-size: 14px; color: #C9CDD4">Llegó a tu precio hoy a las 6:00 a. m.</p>
+<section aria-labelledby="lista-t">
+<h2 id="lista-t" class="list-title label" tabindex="-1">Tus alertas</h2>
+<ul class="alert-list">
 
-<ul style="margin: 0; padding: 0 20px; list-style: none; flex: 1 1 auto; overflow: auto">
-
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) 72px auto; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #2A2D35">
-<span style="min-width: 0"><span style="display: block; font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Huevos AA x30</span><span style="display: block; margin-top: 2px; font-family: 'Space Mono', monospace; font-size: 12px; color: #A3A8B2">meta $16.000 · hoy $15.900</span></span>
-<svg width="72" height="28" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,6 9,10 17,12 26,12 35,11 44,18 52,19 61,18 70,18 79,22 87,24 96,23" fill="none" stroke="#C6F432" stroke-width="2.5" stroke-linejoin="round"></polyline></svg>
-<span style="padding: 4px 8px; background: #C6F432; color: #0E0F12; border: 1px solid #C6F432; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; white-space: nowrap">CUMPLIDA</span>
+<li class="alert-row">
+<a class="ar-main" href="producto.html">
+<span class="ar-name">Huevos AA x30</span>
+<span class="ar-meta">Meta $16.000 · hoy $15.900 en Olímpica</span>
+<span class="ar-trend txt-baja"><svg width="44" height="16" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,6 9,10 17,12 26,12 35,11 44,18 52,19 61,18 70,18 79,22 87,24 96,23" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></polyline></svg><span aria-hidden="true">▼</span> bajando esta semana</span>
+</a>
+<span class="status status-done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Cumplida</span>
+<details class="ar-menu">
+<summary aria-label="Opciones de la alerta de Huevos AA x30"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg></summary>
+<div class="ar-menu-list">
+<button type="button">Poner otra meta</button>
+<button type="button" class="danger" data-delete="Huevos AA x30">Borrar alerta</button>
+</div>
+</details>
 </li>
 
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) 72px auto; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #2A2D35">
-<span style="min-width: 0"><span style="display: block; font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Arroz blanco 1 kg</span><span style="display: block; margin-top: 2px; font-family: 'Space Mono', monospace; font-size: 12px; color: #A3A8B2">meta $4.000 · hoy $4.290</span></span>
-<svg width="72" height="28" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,7 9,14 17,9 26,15 35,16 44,13 52,17 61,16 70,22 79,18 87,24 96,26" fill="none" stroke="#C6F432" stroke-width="2.5" stroke-linejoin="round"></polyline></svg>
-<span style="padding: 4px 8px; background: transparent; color: #C6F432; border: 1px solid #C6F432; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; white-space: nowrap">FALTAN $290</span>
+<li class="alert-row">
+<a class="ar-main" href="producto.html">
+<span class="ar-name">Arroz blanco 1 kg</span>
+<span class="ar-meta">Meta $4.000 · hoy $4.290 en D1</span>
+<span class="ar-trend txt-baja"><svg width="44" height="16" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,7 9,14 17,9 26,15 35,16 44,13 52,17 61,16 70,22 79,18 87,24 96,26" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></polyline></svg><span aria-hidden="true">▼</span> bajando esta semana</span>
+</a>
+<span class="status">Faltan $290</span>
+<details class="ar-menu">
+<summary aria-label="Opciones de la alerta de Arroz blanco 1 kg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg></summary>
+<div class="ar-menu-list">
+<button type="button">Cambiar meta</button>
+<button type="button">Pausar</button>
+<button type="button" class="danger" data-delete="Arroz blanco 1 kg">Borrar alerta</button>
+</div>
+</details>
 </li>
 
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) 72px auto; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #2A2D35">
-<span style="min-width: 0"><span style="display: block; font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Aceite vegetal 1 L</span><span style="display: block; margin-top: 2px; font-family: 'Space Mono', monospace; font-size: 12px; color: #A3A8B2">meta $9.500 · hoy $9.850</span></span>
-<svg width="72" height="28" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,17 9,10 17,16 26,12 35,10 44,14 52,14 61,15 70,19 79,13 87,18 96,14" fill="none" stroke="#A3A8B2" stroke-width="2.5" stroke-linejoin="round"></polyline></svg>
-<span style="padding: 4px 8px; background: transparent; color: #C9CDD4; border: 1px solid #A3A8B2; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; white-space: nowrap">FALTAN $350</span>
+<li class="alert-row">
+<a class="ar-main" href="producto.html">
+<span class="ar-name">Aceite vegetal 1 L</span>
+<span class="ar-meta">Meta $9.500 · hoy $9.850 en Olímpica</span>
+<span class="ar-trend txt-igual"><svg width="44" height="16" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,17 9,10 17,16 26,12 35,10 44,14 52,14 61,15 70,19 79,13 87,18 96,14" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></polyline></svg><span aria-hidden="true">=</span> estable esta semana</span>
+</a>
+<span class="status">Faltan $350</span>
+<details class="ar-menu">
+<summary aria-label="Opciones de la alerta de Aceite vegetal 1 L"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg></summary>
+<div class="ar-menu-list">
+<button type="button">Cambiar meta</button>
+<button type="button">Pausar</button>
+<button type="button" class="danger" data-delete="Aceite vegetal 1 L">Borrar alerta</button>
+</div>
+</details>
 </li>
 
-<li style="display: grid; grid-template-columns: minmax(0, 1fr) 72px auto; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #2A2D35">
-<span style="min-width: 0"><span style="display: block; font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Café molido 500 g</span><span style="display: block; margin-top: 2px; font-family: 'Space Mono', monospace; font-size: 12px; color: #A3A8B2">meta $16.500 · hoy $18.400</span></span>
-<svg width="72" height="28" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,23 9,23 17,20 26,16 35,17 44,20 52,17 61,14 70,13 79,10 87,11 96,12" fill="none" stroke="#FF6A2B" stroke-width="2.5" stroke-linejoin="round"></polyline></svg>
-<span style="padding: 4px 8px; background: transparent; color: #FF6A2B; border: 1px solid #FF6A2B; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; white-space: nowrap">▲ SUBIENDO</span>
+<li class="alert-row">
+<a class="ar-main" href="producto.html">
+<span class="ar-name">Café molido 500 g</span>
+<span class="ar-meta">Meta $16.500 · hoy $18.400 en Jumbo</span>
+<span class="ar-trend txt-sube"><svg width="44" height="16" viewBox="0 0 96 32" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,23 9,23 17,20 26,16 35,17 44,20 52,17 61,14 70,13 79,10 87,11 96,12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></polyline></svg><span aria-hidden="true">▲</span> subiendo esta semana</span>
+</a>
+<span class="status">Faltan $1.900</span>
+<details class="ar-menu">
+<summary aria-label="Opciones de la alerta de Café molido 500 g"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg></summary>
+<div class="ar-menu-list">
+<button type="button">Cambiar meta</button>
+<button type="button">Pausar</button>
+<button type="button" class="danger" data-delete="Café molido 500 g">Borrar alerta</button>
+</div>
+</details>
 </li>
 
 </ul>
+</section>
 
-<nav aria-label="Principal" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #2A2D35; background: #121318; padding: 8px 4px 20px">
-<a href="index.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #A3A8B2; font-size: 12px; font-weight: 600">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Hoy</a>
-<a href="producto.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #A3A8B2; font-size: 12px; font-weight: 600">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Buscar</a>
-<a href="canasta.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #A3A8B2; font-size: 12px; font-weight: 600">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Canasta</a>
-<a href="#" aria-current="page" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: var(--accent); font-size: 12px; font-weight: 700">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>Alertas</a>
+<p class="phone-foot">Precios en línea de Cartagena a las 6:00 a. m.; en tienda pueden variar. Proyecto independiente, sin afiliación con ninguna cadena.</p>
+</main>
+
+<nav class="tabbar" aria-label="Principal">
+<a href="index.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Hoy</a>
+<a href="producto.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Productos</a>
+<a href="canasta.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Mi canasta</a>
+<a href="alertas.html" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>Alertas</a>
 </nav>
 </div>
+<script src="app.js" defer></script>
 </body>
 </html>

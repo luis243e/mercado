@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T05:20:46.626Z",
+  "title": "Design System: Mercado",
+  "extensions": {
+    "colorMeta": {
+      "amarillo-etiqueta": {
+        "role": "primary",
+        "displayName": "Amarillo etiqueta",
+        "canonical": "#FFE14D",
+        "oklch": "oklch(90.9% 0.163 97.5)",
+        "tonalRamp": [
+          "#130A00",
+          "#301F00",
+          "#543900",
+          "#755700",
+          "#957800",
+          "#B49E31",
+          "#D1C58C",
+          "#F6EFD1"
+        ]
+      },
+      "verde-rebaja": {
+        "role": "secondary",
+        "displayName": "Verde rebaja",
+        "canonical": "#45E77A",
+        "oklch": "oklch(82.1% 0.201 150.0)",
+        "tonalRamp": [
+          "#001300",
+          "#003000",
+          "#005400",
+          "#007600",
+          "#00982D",
+          "#46B968",
+          "#98D6A4",
+          "#D8F9DD"
+        ]
+      },
+      "naranja-alza": {
+        "role": "secondary",
+        "displayName": "Naranja alza",
+        "canonical": "#FF6A2B",
+        "oklch": "oklch(70.2% 0.196 40.7)",
+        "tonalRamp": [
+          "#220000",
+          "#4D0000",
+          "#820000",
+          "#AC1000",
+          "#D34000",
+          "#EC794E",
+          "#F8B097",
+          "#FFE4D6"
+        ]
+      },
+      "pizarra": {
+        "role": "neutral",
+        "displayName": "Pizarra",
+        "canonical": "#0E0F12",
+        "oklch": "oklch(16.9% 0.006 271.0)",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#212224",
+          "#3C3D40",
+          "#595B5F",
+          "#797A7E",
+          "#9D9EA2",
+          "#C3C4C6",
+          "#EEEEEF"
+        ]
+      },
+      "pizarra-franja": {
+        "role": "neutral",
+        "displayName": "Pizarra franja",
+        "canonical": "#121318",
+        "oklch": "oklch(18.8% 0.010 276.4)",
+        "tonalRamp": [
+          "#0B0B0D",
+          "#212125",
+          "#3C3D42",
+          "#595A61",
+          "#787A81",
+          "#9D9EA3",
+          "#C3C4C7",
+          "#EEEEF0"
+        ]
+      },
+      "pizarra-panel": {
+        "role": "neutral",
+        "displayName": "Pizarra panel",
+        "canonical": "#141519",
+        "oklch": "oklch(19.6% 0.008 274.5)",
+        "tonalRamp": [
+          "#0B0B0D",
+          "#212124",
+          "#3C3D41",
+          "#595B60",
+          "#797A7F",
+          "#9D9EA2",
+          "#C3C4C7",
+          "#EEEEF0"
+        ]
+      },
+      "pizarra-campo": {
+        "role": "neutral",
+        "displayName": "Pizarra campo",
+        "canonical": "#17191E",
+        "oklch": "oklch(21.4% 0.010 268.2)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#202225",
+          "#3B3D42",
+          "#585B61",
+          "#787A81",
+          "#9C9EA4",
+          "#C3C4C7",
+          "#EEEEF0"
+        ]
+      },
+      "tiza": {
+        "role": "neutral",
+        "displayName": "Tiza",
+        "canonical": "#F3F1EA",
+        "oklch": "oklch(95.8% 0.010 93.6)",
+        "tonalRamp": [
+          "#0C0B09",
+          "#23221E",
+          "#3F3D38",
+          "#5C5B55",
+          "#7C7A74",
+          "#A09E99",
+          "#C5C4C1",
+          "#EFEEED"
+        ]
+      },
+      "tiza-media": {
+        "role": "neutral",
+        "displayName": "Tiza media",
+        "canonical": "#C9CDD4",
+        "oklch": "oklch(84.7% 0.011 261.8)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#202225",
+          "#3A3D42",
+          "#575B61",
+          "#777A81",
+          "#9C9EA4",
+          "#C2C4C7",
+          "#EDEEF0"
+        ]
+      },
+      "tiza-tenue": {
+        "role": "neutral",
+        "displayName": "Tiza tenue",
+        "canonical": "#A3A8B2",
+        "oklch": "oklch(73.1% 0.015 264.5)",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#1F2227",
+          "#393D45",
+          "#565B64",
+          "#767A84",
+          "#9B9EA6",
+          "#C2C4C9",
+          "#EDEEF1"
+        ]
+      },
+      "raya": {
+        "role": "neutral",
+        "displayName": "Raya",
+        "canonical": "#2A2D35",
+        "oklch": "oklch(29.7% 0.015 269.2)",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#202126",
+          "#3A3D45",
+          "#575B64",
+          "#777A84",
+          "#9B9EA6",
+          "#C2C4C9",
+          "#EDEEF1"
+        ]
+      },
+      "borde-control": {
+        "role": "neutral",
+        "displayName": "Borde de control",
+        "canonical": "#646A75",
+        "oklch": "oklch(52.3% 0.019 262.7)",
+        "tonalRamp": [
+          "#090B0E",
+          "#1E2228",
+          "#383D47",
+          "#555B66",
+          "#747B86",
+          "#9A9FA8",
+          "#C1C4CA",
+          "#EDEEF2"
+        ]
+      },
+      "gris-igual": {
+        "role": "neutral",
+        "displayName": "Gris igual",
+        "canonical": "#A3A8B2",
+        "oklch": "oklch(73.1% 0.015 264.5)",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#1F2227",
+          "#393D45",
+          "#565B64",
+          "#767A84",
+          "#9B9EA6",
+          "#C2C4C9",
+          "#EDEEF1"
+        ]
+      },
+      "gris-barra": {
+        "role": "neutral",
+        "displayName": "Gris barra",
+        "canonical": "#8E939C",
+        "oklch": "oklch(66.2% 0.015 262.4)",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#1F2226",
+          "#393D44",
+          "#565B63",
+          "#767A83",
+          "#9B9FA6",
+          "#C2C4C9",
+          "#EDEEF1"
+        ]
+      },
+      "rosa-error": {
+        "role": "secondary",
+        "displayName": "Rosa error",
+        "canonical": "#FF7A8A",
+        "oklch": "oklch(73.8% 0.162 14.5)",
+        "tonalRamp": [
+          "#1F0004",
+          "#470011",
+          "#790023",
+          "#A1223D",
+          "#C7485C",
+          "#E17B86",
+          "#F1B0B5",
+          "#FFE4E6"
+        ]
+      },
+      "papel-tirilla": {
+        "role": "neutral",
+        "displayName": "Papel de tirilla",
+        "canonical": "#FBFAF6",
+        "oklch": "oklch(98.5% 0.005 95.1)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#222220",
+          "#3E3D3A",
+          "#5C5B57",
+          "#7B7A77",
+          "#9F9E9B",
+          "#C4C4C2",
+          "#EFEEED"
+        ]
+      },
+      "tinta-tirilla": {
+        "role": "neutral",
+        "displayName": "Tinta de tirilla",
+        "canonical": "#17191E",
+        "oklch": "oklch(21.4% 0.010 268.2)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#202225",
+          "#3B3D42",
+          "#585B61",
+          "#787A81",
+          "#9C9EA4",
+          "#C3C4C7",
+          "#EEEEF0"
+        ]
+      },
+      "tinta-tirilla-tenue": {
+        "role": "neutral",
+        "displayName": "Tinta tenue de tirilla",
+        "canonical": "#4A4E57",
+        "oklch": "oklch(42.4% 0.016 266.5)",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#1F2227",
+          "#393D45",
+          "#575B64",
+          "#767A84",
+          "#9B9EA6",
+          "#C2C4C9",
+          "#EDEEF1"
+        ]
+      },
+      "fondo-vista-previa": {
+        "role": "neutral",
+        "displayName": "Fondo de vista previa",
+        "canonical": "#07080A",
+        "oklch": "oklch(13.4% 0.005 262.3)",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#212223",
+          "#3C3D40",
+          "#595B5E",
+          "#797A7D",
+          "#9D9EA1",
+          "#C3C4C6",
+          "#EEEEEF"
+        ]
+      },
+      "oliva-sobre-amarillo": {
+        "role": "neutral",
+        "displayName": "Oliva sobre amarillo",
+        "canonical": "#4A4316",
+        "oklch": "oklch(38.0% 0.064 100.5)",
+        "tonalRamp": [
+          "#0E0B02",
+          "#262208",
+          "#443E14",
+          "#635C30",
+          "#837C4F",
+          "#A5A07C",
+          "#C8C5AF",
+          "#F1EFE3"
+        ]
+      },
+      "borde-sobre-amarillo": {
+        "role": "neutral",
+        "displayName": "Borde sobre amarillo",
+        "canonical": "#6E6326",
+        "oklch": "oklch(49.7% 0.082 99.1)",
+        "tonalRamp": [
+          "#0F0B00",
+          "#282200",
+          "#473D00",
+          "#665B1D",
+          "#867B3F",
+          "#A8A071",
+          "#CAC5A9",
+          "#F2EFE0"
+        ]
+      },
+      "rojo-error-sobre-amarillo": {
+        "role": "secondary",
+        "displayName": "Rojo error sobre amarillo",
+        "canonical": "#8A1C00",
+        "oklch": "oklch(41.4% 0.149 33.9)",
+        "tonalRamp": [
+          "#1E0100",
+          "#450500",
+          "#750D00",
+          "#9D3017",
+          "#C2523A",
+          "#DD826E",
+          "#EEB4A7",
+          "#FFE6DE"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Anton)",
+        "purpose": "Un titular por pantalla, el precio protagonista y el veredicto."
+      },
+      "headline": {
+        "displayName": "Headline (Anton)",
+        "purpose": "Títulos de sección."
+      },
+      "title": {
+        "displayName": "Title (Anton)",
+        "purpose": "Títulos de panel y texto del botón principal."
+      },
+      "body": {
+        "displayName": "Body (Archivo)",
+        "purpose": "Explicaciones y texto corrido."
+      },
+      "lead": {
+        "displayName": "Lead (Archivo)",
+        "purpose": "Párrafo de entrada bajo el h1."
+      },
+      "label": {
+        "displayName": "Label (Space Mono)",
+        "purpose": "Nombres de campos y encabezados de datos, en mayúsculas."
+      },
+      "data": {
+        "displayName": "Data (Space Mono)",
+        "purpose": "Precios, porcentajes y cantidades con números tabulares."
+      }
+    },
+    "shadows": [
+      {
+        "name": "menu-flotante",
+        "value": "0 12px 28px rgba(0, 0, 0, 0.45)",
+        "purpose": "Solo lo que flota: menú de cada alerta, panel de nueva alerta y avisos flotantes. Ninguna otra superficie lleva sombra."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Balanceo de la etiqueta de precio, giro de la estrella y de la cruz de agregar."
+      },
+      {
+        "name": "tag-swing",
+        "value": "rotate(-2.5deg) 260ms",
+        "purpose": "Hover del botón principal, desde el orificio."
+      },
+      {
+        "name": "ticker",
+        "value": "translateX(-50%) 60s linear infinite",
+        "purpose": "Cinta de cotizaciones; con pausa y desactivada con movimiento reducido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "movil",
+        "value": "760px"
+      },
+      {
+        "name": "telefono-real",
+        "value": "480px"
+      },
+      {
+        "name": "tirilla-inclinada",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón principal (etiqueta de precio)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "La acción principal de cada pantalla, con forma de etiqueta de precio colgada.",
+      "html": "<button class=\"ds-btn-tag\">Agregar a mi canasta</button>",
+      "css": ".ds-btn-tag{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px 0 40px;border:0;background:transparent;color:#0E0F12;font-family:Anton,Archivo,sans-serif;font-size:22px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transform-origin:6px 50%;transition:transform 260ms cubic-bezier(0.16,1,0.3,1)}.ds-btn-tag::before{content:'';position:absolute;inset:0;z-index:-1;background:#FFE14D;clip-path:polygon(18px 0,100% 0,100% 100%,18px 100%,0 50%);transition:background-color 160ms ease-out}.ds-btn-tag::after{content:'';position:absolute;left:14px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:#0E0F12}.ds-btn-tag:hover{transform:rotate(-2.5deg)}.ds-btn-tag:hover::before{background:#F3F1EA}.ds-btn-tag:active{transform:scale(0.97)}.ds-btn-tag:focus-visible{outline:3px solid #FFE14D;outline-offset:3px}"
+    },
+    {
+      "name": "Botón secundario",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción secundaria junto a la principal.",
+      "html": "<button class=\"ds-btn\">Avísame si baja</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid #F3F1EA;background:transparent;color:#F3F1EA;font-family:Archivo,sans-serif;font-size:15px;font-weight:600;cursor:pointer}.ds-btn:hover{background:#F3F1EA;color:#0E0F12}.ds-btn:focus-visible{outline:3px solid #FFE14D;outline-offset:3px}"
+    },
+    {
+      "name": "Campo de búsqueda",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Entrada principal con etiqueta arriba.",
+      "html": "<label class=\"ds-field\"><span>¿Qué vas a mercar?</span><input type=\"search\" placeholder=\"arroz, huevos, aceite…\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:10px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#A3A8B2}.ds-field input{height:56px;padding:0 18px;background:#17191E;color:#F3F1EA;border:2px solid #F3F1EA;font-family:Archivo,sans-serif;font-size:18px;text-transform:none;letter-spacing:0}.ds-field input:focus-visible{outline:3px solid #FFE14D;outline-offset:3px}"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "description": "Navegación de escritorio con la página activa subrayada en amarillo.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Hoy</a><a href=\"#\">Productos</a><a href=\"#\">Mi canasta</a><a href=\"#\">Alertas</a></nav>",
+      "css": ".ds-nav{display:flex;gap:28px;font-family:Archivo,sans-serif;font-size:15px;font-weight:600}.ds-nav a{color:#A3A8B2;text-decoration:none;padding:10px 0 6px;border-bottom:3px solid transparent}.ds-nav a:hover{color:#F3F1EA}.ds-nav a[aria-current]{color:#F3F1EA;border-bottom-color:#FFE14D}.ds-nav a:focus-visible{outline:3px solid #FFE14D;outline-offset:3px}"
+    },
+    {
+      "name": "Chip de búsqueda",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Atajo a una búsqueda frecuente.",
+      "html": "<a class=\"ds-chip\" href=\"#\">arroz</a>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid #646A75;border-radius:999px;color:#F3F1EA;font-family:Archivo,sans-serif;font-size:14px;text-decoration:none}.ds-chip:hover{border-color:#FFE14D}.ds-chip:focus-visible{outline:3px solid #FFE14D;outline-offset:3px}"
+    },
+    {
+      "name": "Señal de precio",
+      "kind": "custom",
+      "refersTo": "delta-baja",
+      "description": "Badge de cambio de precio: verde bajó, naranja subió; siempre con flecha.",
+      "html": "<span class=\"ds-delta ds-baja\">▼ 3,1%</span> <span class=\"ds-delta ds-sube\">▲ 2,4%</span>",
+      "css": ".ds-delta{display:inline-flex;padding:5px 10px;font-family:'Space Mono',monospace;font-size:14px;font-weight:700;color:#0E0F12;font-variant-numeric:tabular-nums}.ds-baja{background:#45E77A}.ds-sube{background:#FF6A2B}"
+    },
+    {
+      "name": "Panel de datos",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Contenedor plano para filas de precios.",
+      "html": "<div class=\"ds-panel\"><p class=\"ds-panel-t\">DÓNDE ESTÁ HOY</p><p class=\"ds-row\"><b>D1</b><span>$4.290</span></p><p class=\"ds-row\"><b>Olímpica</b><span>$4.520</span></p></div>",
+      "css": ".ds-panel{background:#141519;border:1px solid #2A2D35;color:#F3F1EA;font-family:Archivo,sans-serif;min-width:260px}.ds-panel-t{margin:0;padding:18px 20px;font-family:Anton,sans-serif;font-size:24px;border-bottom:1px solid #2A2D35}.ds-row{margin:0;display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #2A2D35}.ds-row span{font-family:'Space Mono',monospace;font-weight:700}"
+    },
+    {
+      "name": "Veredicto",
+      "kind": "custom",
+      "description": "Respuesta a ¿Compro ya o espero?",
+      "html": "<div class=\"ds-verdict\"><p class=\"ds-vq\">¿Compro ya o espero?</p><p class=\"ds-va\">Compra ya.</p><p class=\"ds-vw\">Está por debajo de su promedio de 90 días.</p></div>",
+      "css": ".ds-verdict{border:2px solid #45E77A;padding:24px;color:#C9CDD4;font-family:Archivo,sans-serif;max-width:360px}.ds-vq{margin:0;color:#F3F1EA;font-weight:700}.ds-va{margin:6px 0 10px;font-family:Anton,sans-serif;font-size:56px;line-height:1;text-transform:uppercase;color:#45E77A}.ds-vw{margin:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La pizarra de la plaza",
+    "overview": "Mercado es un tablero de cotizaciones de bolsa pintado con el lenguaje del supermercado colombiano. De la bolsa toma la cinta de precios que corre, el índice con su gráfico, los símbolos de producto (ARZ·1K) y los cambios ▲▼ en porcentaje. Del supermercado toma la estrella amarilla de oferta, la etiqueta de precio que cuelga, la tirilla de papel con código de barras y la voz que tutea. La combinación es la idea: los precios de la comida se miran con la seriedad de una cotización, pero se cuentan con el humor de la plaza.\r\n\r\nEl tono es seguro, directo y con humor. Las cifras grandes afirman, los textos cortos deciden (\"Compra ya.\", \"Te ahorras $6.520\") y el guiño va en los detalles: la estrella inclinada, la etiqueta que se balancea, \"Gracias por no pagar de más\". La pizarra es oscura porque se lee como tablero, y deja que el amarillo y las señales de precio lleven toda la atención. La densidad es media: los números van en monoespaciada y alineados, con aire entre bloques.",
+    "keyCharacteristics": [
+      "Fondo de pizarra casi negra, tinta clara cálida, un solo amarillo de marca.\r",
+      "Titulares en Anton, todo en mayúsculas, condensados y enormes; datos en Space Mono con números tabulares; el texto corrido en Archivo.\r",
+      "Señales de precio con significado fijo: verde = bajó, naranja = subió, gris = igual. Siempre acompañadas de ▼ ▲ = o de texto.\r",
+      "Formas rectas, sin sombras: profundidad por tono de superficie y por bordes.\r",
+      "Objetos del supermercado como componentes: estrella de oferta, etiqueta de precio, tirilla.\r"
+    ],
+    "rules": [
+      {
+        "name": "The One Job Rule",
+        "body": "Cada color tiene un solo trabajo. El amarillo nunca significa \"bajó\", el verde nunca identifica una tienda y el naranja nunca adorna.\r",
+        "section": "colors"
+      },
+      {
+        "name": "The Stores Are Words Rule",
+        "body": "Las tiendas no tienen color propio. Se nombran con texto y, en los gráficos, se distinguen por grosor y tipo de línea: la más barata va en amarillo y gruesa, las demás en tiza, continua, discontinua o punteada.\r",
+        "section": "colors"
+      },
+      {
+        "name": "The Never Alone Rule",
+        "body": "Ningún significado depende solo del color. Cada señal lleva ▼ ▲ = o una palabra (\"Cumplida\", \"Faltan $290\"), y el lector de pantalla oye \"bajó\" o \"subió\".\r",
+        "section": "colors"
+      },
+      {
+        "name": "The Accent Guard Rule",
+        "body": "Si se cambia el acento de marca, no puede ser verde, naranja ni rosa.\r",
+        "section": "colors"
+      },
+      {
+        "name": "The Where And When Rule",
+        "body": "Ningún precio aparece sin ciudad y hora. El selector de ciudad del encabezado dice \"Cartagena · hoy 6:00 a. m.\" en todas las pantallas de escritorio; en la vista móvil de Alertas la ciudad abre el subtítulo, y la tirilla la repite.\r",
+        "section": "colors"
+      },
+      {
+        "name": "The One Source Rule",
+        "body": "Todos los números de ejemplo salen de un mismo conjunto de datos: el gráfico, el rango del veredicto, la ayuda de la alerta y la tirilla tienen que poder comprobarse entre sí.\r",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Means Measured Rule",
+        "body": "Space Mono se usa solo para lo que es dato, medida o registro: precios, porcentajes, fechas, códigos y etiquetas de campo. Nunca para texto corrido: notas de sección, líneas de fecha y explicaciones van en Archivo. Las cifras en Space Mono no bajan de 13 px.\r",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "No va una etiqueta pequeña encima de un titular. Si hace falta contexto, va debajo del titular como línea de apoyo, o el titular lo dice solo.\r",
+        "section": "typography"
+      },
+      {
+        "name": "The Tap Floor Rule",
+        "body": "Todo lo que se toca mide al menos 44 px de alto.\r",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Board Rule",
+        "body": "Nada proyecta sombra en reposo. Las tarjetas se distinguen por superficie y borde, nunca por sombra, y nunca con sombras duras desplazadas.\r",
+        "section": "elevation"
+      },
+      {
+        "name": "The Complete Store Rule",
+        "body": "El ahorro se mide contra la tienda más barata entre las que tienen TODA la lista, y se dice por qué: \"Olímpica, la única que tiene todo. D1 sería más barata, pero no tiene café\". Si la persona cambia la lista, la tienda de comparación se recalcula. Elegir un plan reorganiza la lista por tienda, la tirilla y la barra del total, y lo anuncia al lector de pantalla.\r",
+        "section": "other"
+      }
+    ],
+    "dos": [
+      "**Do** reservar el amarillo (#FFE14D) para marca, \"lo mejor\", foco y la acción principal de cada pantalla.\r",
+      "**Do** acompañar cada verde o naranja con ▼ ▲ = o una palabra, y con texto oculto \"bajó\" o \"subió\" para el lector de pantalla.\r",
+      "**Do** mostrar el precio por unidad (\"$4.290 el kilo\", \"$530 cada uno\") junto al precio de cada producto.\r",
+      "**Do** poner junto a cada recomendación de qué hacer la hora del dato y el aviso \"en tienda puede variar\".\r",
+      "**Do** usar Space Mono con números tabulares para todo número que se compare en columna.\r",
+      "**Do** dibujar una versión móvil propia de cada gráfico en lugar de encoger el de escritorio.\r",
+      "**Do** mantener \"Proyecto independiente · sin afiliación con ninguna cadena\" visible en el pie de cada pantalla.\r",
+      "**Do** ofrecer \"Deshacer\" en un aviso flotante después de sacar o borrar algo.\r"
+    ],
+    "donts": [
+      "**Don't** dar a una tienda un color propio, ni usar verde o naranja para identificar tiendas.\r",
+      "**Don't** usar la estrella de oferta como adorno: solo anuncia una bajada de precio.\r",
+      "**Don't** poner etiquetas pequeñas en mayúsculas encima de un titular ni de un precio protagonista.\r",
+      "**Don't** usar sombras en tarjetas, ni sombras duras desplazadas.\r",
+      "**Don't** redondear paneles, entradas o botones rectangulares; las únicas curvas son chips, el botón de ciudad y el botón flotante.\r",
+      "**Don't** pasar de 96 px en titulares de pantalla.\r"
+    ]
+  }
+}

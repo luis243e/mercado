@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mercado — Estados de la interfaz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<div class="header-band">
+<header class="site-header">
+<a class="brand" href="index.html">
+<span class="brand-name">MERCADO</span>
+<span class="brand-tag">BOLSA DE LA CANASTA</span>
+</a>
+<nav class="nav" aria-label="Principal">
+<a href="index.html">Hoy</a>
+<a href="producto.html">Productos</a>
+<a href="canasta.html">Mi canasta</a>
+<a href="alertas.html">Alertas</a>
+</nav>
+<div class="header-tool">
+<button type="button" class="pill-button city" aria-label="Cartagena, precios de hoy a las 6:00 a. m. Cambiar ciudad">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+<span>Cartagena</span><span class="city-time">hoy 6:00 a. m.</span>
+</button>
+</div>
+</header>
+</div>
+
+<main id="contenido" class="wrap states-page">
+<h1 class="display-1">Estados de la interfaz</h1>
+<p class="lead states-lead">Lo que ve la persona cuando algo no es el caso ideal: no hay datos, no hay resultados, algo falló o hay que confirmar. Cada estado dice en qué pantalla aparece.</p>
+
+<div class="states-grid">
+
+<section class="state" aria-labelledby="s-fresh">
+<h2 id="s-fresh" class="state-name">Datos de ayer en una tienda</h2>
+<p class="state-where">Aparece en: Hoy, Producto y Mi canasta · arriba del contenido</p>
+<div class="state-demo">
+<div class="notice">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<p><strong>Hoy no pudimos revisar Jumbo.</strong> Sus precios son de ayer, 6:00 a. m. Volvemos a intentarlo mañana temprano.</p>
+</div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-missing">
+<h2 id="s-missing" class="state-name">Una tienda no lo tiene</h2>
+<p class="state-where">Aparece en: Producto · Dónde está hoy</p>
+<div class="state-demo panel">
+<div class="where-row">
+<span class="where-store">D1</span>
+<span class="where-price">$4.290</span>
+<span class="where-name">Arroz blanco 1.000 g · $4.290 el kilo</span>
+<span class="tag-best">MEJOR</span>
+</div>
+<div class="where-row is-missing">
+<span class="where-store">Jumbo</span>
+<span class="where-price">Sin dato</span>
+<span class="where-name">No lo encontramos hoy en su tienda en línea.</span>
+<span></span>
+</div>
+</div>
+</section>
+
+<section class="state state-wide" aria-labelledby="s-verdict">
+<h2 id="s-verdict" class="state-name">Las tres respuestas del veredicto</h2>
+<p class="state-where">Aparece en: Producto · ¿Compro ya o espero?</p>
+<div class="verdict-set">
+<div class="verdict v-compra">
+<div class="verdict-main"><p class="verdict-q">¿Compro ya o espero?</p><p class="verdict-a">Compra ya.</p><p class="verdict-fact">Hoy está más barato que 88 de los últimos 90 días.</p></div>
+<figure class="range" role="img" aria-label="Hoy cerca del mínimo de 90 días.">
+<div class="range-track"><span class="range-avg" style="left: 70%"></span><span class="range-today" style="left: 50%"></span><span class="range-today-label" style="left: 50%">hoy</span></div>
+<div class="range-scale"><span>mín.</span><span class="range-scale-avg" style="left: 70%">prom.</span><span>máx.</span></div>
+</figure>
+</div>
+<div class="verdict v-espera">
+<div class="verdict-main"><p class="verdict-q">¿Compro ya o espero?</p><p class="verdict-a">Espera.</p><p class="verdict-fact">Hoy está más caro que 80 de los últimos 90 días.</p></div>
+<figure class="range" role="img" aria-label="Hoy cerca del máximo de 90 días.">
+<div class="range-track"><span class="range-avg" style="left: 55%"></span><span class="range-today" style="left: 90%"></span><span class="range-today-label" style="left: 90%">hoy</span></div>
+<div class="range-scale"><span>mín.</span><span class="range-scale-avg" style="left: 55%">prom.</span><span>máx.</span></div>
+</figure>
+</div>
+<div class="verdict v-igual">
+<div class="verdict-main"><p class="verdict-q">¿Compro ya o espero?</p><p class="verdict-a">Da igual.</p><p class="verdict-fact">Hoy está más barato que 41 de los últimos 90 días: su precio de siempre.</p></div>
+<figure class="range" role="img" aria-label="Hoy cerca del promedio de 90 días.">
+<div class="range-track"><span class="range-avg" style="left: 50%"></span><span class="range-today" style="left: 46%"></span><span class="range-today-label" style="left: 46%">hoy</span></div>
+<div class="range-scale"><span>mín.</span><span class="range-scale-avg" style="left: 50%">prom.</span><span>máx.</span></div>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-empty">
+<h2 id="s-empty" class="state-name">Canasta vacía</h2>
+<p class="state-where">Aparece en: Mi canasta · primera vez o lista vacía</p>
+<div class="state-demo empty">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>
+<p class="empty-title">Tu canasta está vacía.</p>
+<p class="empty-text">Escribe lo que vas a mercar esta semana, uno por uno. Con 3 o más productos te armamos el plan para gastar menos.</p>
+<div class="chips empty-chips">
+<span>Para empezar:</span>
+<a href="#">+ arroz</a>
+<a href="#">+ huevos</a>
+<a href="#">+ aceite</a>
+</div>
+<a class="btn" href="#">Empezar con los 20 productos de la canasta básica</a>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-noresult">
+<h2 id="s-noresult" class="state-name">Búsqueda sin resultados</h2>
+<p class="state-where">Aparece en: Búsqueda · Hoy y Productos</p>
+<div class="state-demo empty">
+<p class="empty-title">No encontramos «quesillo».</p>
+<p class="empty-text">Revisa cómo lo escribiste o prueba con algo más general, como <a href="#">queso</a>. Todavía no comparamos todos los productos de las tiendas.</p>
+<button type="button" class="btn">Pedir que agreguen «quesillo»</button>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-city">
+<h2 id="s-city" class="state-name">Ciudad que aún no cubrimos</h2>
+<p class="state-where">Aparece en: Botón de ciudad · encabezado</p>
+<div class="state-demo empty">
+<p class="empty-title">Aún no llegamos a Barranquilla.</p>
+<p class="empty-text">Por ahora solo revisamos precios para Cartagena. Puedes seguir mirando los de Cartagena como referencia, sabiendo que en tu ciudad pueden ser otros.</p>
+<button type="button" class="btn">Ver precios de Cartagena</button>
+<form class="inline-form">
+<label class="field-label" for="correo-ciudad">Avísame cuando lleguen a Barranquilla</label>
+<div class="inline-row">
+<input class="input" id="correo-ciudad" type="email" placeholder="tu correo" autocomplete="email">
+<button type="submit" class="btn">Avisarme</button>
+</div>
+</form>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-channel">
+<h2 id="s-channel" class="state-name">Telegram sin conectar</h2>
+<p class="state-where">Aparece en: Producto · Avísame cuando baje</p>
+<div class="state-demo alert-form on-accent">
+<fieldset class="af-channels">
+<legend class="af-label">Avisarme por</legend>
+<label class="af-channel">
+<input type="radio" name="canal-demo" value="telegram" checked>
+<span><strong>Telegram</strong><small>Sin conectar</small></span>
+</label>
+<label class="af-channel">
+<input type="radio" name="canal-demo" value="correo">
+<span><strong>Correo</strong><small>Te pediremos tu correo</small></span>
+</label>
+</fieldset>
+<p class="af-hint">Para avisarte por Telegram, abre nuestro chat y toca <strong>Iniciar</strong>. Después vuelve aquí y crea la alerta.</p>
+<a class="btn-primary btn-dark btn-block" href="#">Conectar Telegram</a>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-target">
+<h2 id="s-target" class="state-name">Meta mal escrita</h2>
+<p class="state-where">Aparece en: Producto · Precio objetivo</p>
+<div class="state-demo alert-form on-accent">
+<label for="objetivo-mal" class="af-label">Precio objetivo</label>
+<div class="money is-invalid">
+<span aria-hidden="true">$</span>
+<input id="objetivo-mal" type="text" inputmode="numeric" value="cuatro mil" aria-invalid="true" aria-describedby="objetivo-mal-error">
+</div>
+<p id="objetivo-mal-error" class="af-error">Escribe solo el número, por ejemplo 4.000.</p>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-created">
+<h2 id="s-created" class="state-name">Alerta creada</h2>
+<p class="state-where">Aparece en: Producto · después de Crear alerta</p>
+<div class="state-demo confirm">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>
+<div>
+<p class="empty-title">Listo, quedó creada.</p>
+<p class="empty-text">Te escribimos por Telegram el día que alguna tienda venda Arroz blanco 1 kg a $4.000 o menos. Una sola vez.</p>
+<a href="alertas.html">Ver mis alertas</a>
+</div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-fail">
+<h2 id="s-fail" class="state-name">No se pudo guardar</h2>
+<p class="state-where">Aparece en: Producto · si falla Crear alerta</p>
+<div class="state-demo failure">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.5"></path></svg>
+<div>
+<p class="empty-title">No pudimos crear la alerta.</p>
+<p class="empty-text">Revisa tu conexión e inténtalo de nuevo. Tu meta de $4.000 sigue escrita.</p>
+<button type="button" class="btn">Intentar de nuevo</button>
+</div>
+</div>
+</section>
+
+
+<section class="state" aria-labelledby="s-first">
+<h2 id="s-first" class="state-name">Primera visita: elegir ciudad</h2>
+<p class="state-where">Aparece en: Hoy · la primera vez, antes de mostrar precios</p>
+<div class="state-demo empty">
+<p class="empty-title">¿Dónde vas a mercar?</p>
+<p class="empty-text">Los precios cambian de una ciudad a otra. Por ahora revisamos los de Cartagena; si estás en otra ciudad, te avisamos cuando lleguemos.</p>
+<div class="city-choices">
+<button type="button" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>&nbsp;Cartagena</button>
+<button type="button" class="btn">Otra ciudad</button>
+</div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-collect">
+<h2 id="s-collect" class="state-name">Revisando los precios de hoy</h2>
+<p class="state-where">Aparece en: todas las pantallas · antes de que termine la revisión de la mañana</p>
+<div class="state-demo">
+<div class="notice">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<p><strong>Estamos revisando los precios de hoy.</strong> Mientras tanto ves los de ayer, 6:00 a. m. Se actualizan solos cuando terminemos.</p>
+</div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-offline">
+<h2 id="s-offline" class="state-name">Sin conexión</h2>
+<p class="state-where">Aparece en: todas las pantallas · arriba del contenido</p>
+<div class="state-demo">
+<div class="notice">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0"></path><path d="M5.5 12a10 10 0 0 1 13 0"></path><path d="M9 15.5a5 5 0 0 1 6 0"></path><path d="M3 3l18 18"></path></svg>
+<p><strong>Sin conexión.</strong> Ves los precios de hoy a las 6:00 a. m. que ya habías cargado. Los cambios a tu lista se guardan cuando vuelva la señal.</p>
+</div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-single">
+<h2 id="s-single" class="state-name">Solo está en una tienda</h2>
+<p class="state-where">Aparece en: Producto · en lugar de Dónde está hoy y del veredicto</p>
+<div class="state-demo panel">
+<div class="where-row">
+<span class="where-store">Olímpica</span>
+<span class="where-price">$12.900</span>
+<span class="where-name">Queso costeño 500 g · $25.800 el kilo</span>
+<span></span>
+</div>
+<p class="single-note">Solo lo encontramos en Olímpica, así que hoy no hay con qué compararlo ni damos veredicto. Puedes ponerle una alerta igual.</p>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-small">
+<h2 id="s-small" class="state-name">Canasta con menos de 3 productos</h2>
+<p class="state-where">Aparece en: Mi canasta · selector de tiendas</p>
+<div class="state-demo">
+<fieldset class="plan">
+<legend class="field-label">¿A cuántas tiendas quieres ir?</legend>
+<div class="plan-options">
+<label><input type="radio" name="plan-demo" value="1" checked><span><b>1</b>todo en una<small>D1 · $12.480</small></span></label>
+<label><input type="radio" name="plan-demo" value="2" disabled><span><b>2</b>el punto medio</span></label>
+<label><input type="radio" name="plan-demo" value="3" disabled><span><b>3</b>cazador de ofertas</span></label>
+</div>
+</fieldset>
+<p class="hint muted plan-hint">Con 2 productos todavía no vale la pena ir a otra tienda. Agrega al menos 3 y te armamos el plan.</p>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-noalerts">
+<h2 id="s-noalerts" class="state-name">Sin alertas</h2>
+<p class="state-where">Aparece en: Alertas · la primera vez</p>
+<div class="state-demo empty">
+<p class="empty-title">Aún no vigilas ningún producto.</p>
+<p class="empty-text">Elige un producto, ponle el precio que quieres pagar y te escribimos por Telegram o correo el día que alguna tienda lo cumpla. Una sola vez.</p>
+<a class="btn-primary" href="producto.html#alerta">Crear mi primera alerta</a>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-paused">
+<h2 id="s-paused" class="state-name">Alerta pausada</h2>
+<p class="state-where">Aparece en: Alertas · lista</p>
+<div class="state-demo">
+<ul class="alert-list">
+<li class="alert-row is-paused">
+<a class="ar-main" href="producto.html">
+<span class="ar-name">Leche entera 1,1 L</span>
+<span class="ar-meta">Meta $4.300 · hoy $4.650 en D1</span>
+<span class="ar-trend muted">No te avisamos mientras esté pausada</span>
+</a>
+<span class="status status-paused">Pausada</span>
+<span class="ar-menu-static" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg></span>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-toasts">
+<h2 id="s-toasts" class="state-name">Avisos después de una acción</h2>
+<p class="state-where">Aparece en: abajo de la pantalla, 10 segundos (se pausa con el cursor o el foco), sobre la barra de pestañas en móvil</p>
+<div class="state-demo toast-stack">
+<div class="toast toast-static"><p>Agregaste 1 × Pasta spaghetti 500 g a tu canasta.</p><a href="canasta.html">Ver canasta</a></div>
+<div class="toast toast-static"><p>Sacaste Panela 500 g de la lista.</p><button type="button">Deshacer</button></div>
+<div class="toast toast-static"><p>Borraste la alerta de Café molido 500 g.</p><button type="button">Deshacer</button></div>
+</div>
+</section>
+
+
+<section class="state" aria-labelledby="s-addmiss">
+<h2 id="s-addmiss" class="state-name">Producto que no reconocemos</h2>
+<p class="state-where">Aparece en: Mi canasta · al agregar</p>
+<div class="state-demo empty">
+<p class="empty-title">No encontramos «bocadillo veleño».</p>
+<p class="empty-text">Lo dejamos en tu lista sin precio para que no se te olvide. Si lo escribes distinto, quizá lo encontremos: prueba con «bocadillo».</p>
+<div class="chips empty-chips"><span>Parecidos:</span><a href="#">+ bocadillo</a><a href="#">+ guayaba en pasta</a></div>
+</div>
+</section>
+
+<section class="state" aria-labelledby="s-tgfail">
+<h2 id="s-tgfail" class="state-name">No pudimos avisarte por Telegram</h2>
+<p class="state-where">Aparece en: Alertas · sobre la alerta cumplida</p>
+<div class="state-demo failure">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.5"></path></svg>
+<div>
+<p class="empty-title">Tu alerta se cumplió, pero el mensaje no llegó.</p>
+<p class="empty-text">Telegram no nos dejó escribirte; puede que hayas cerrado el chat. Huevos AA x30 está hoy a $15.900 en Olímpica.</p>
+<button type="button" class="btn">Volver a conectar Telegram</button>
+</div>
+</div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+<span>Precios tomados de las tiendas en línea a las 6:00 a. m. Pueden variar en el punto físico.</span>
+<span class="mono">Proyecto independiente · sin afiliación con ninguna cadena</span>
+</footer>
+
+<nav class="tabbar" aria-label="Principal (móvil)">
+<a href="index.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Hoy</a>
+<a href="producto.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Productos</a>
+<a href="canasta.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Mi canasta</a>
+<a href="alertas.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>Alertas</a>
+</nav>
+</body>
+</html>
