@@ -1,0 +1,33 @@
+/* Mercado — estilos compartidos
+   El color de acento se cambia aquí y se aplica en todas las pantallas.
+   Opciones del diseño: #FFE14D (amarillo), #C6F432 (lima), #FF6A2B (naranja), #7CC4FF (azul) */
+:root {
+  --accent: #FFE14D;
+}
+
+body {
+  margin: 0;
+  background: #0E0F12;
+}
+
+a { color: #F3F1EA; }
+a:hover { color: #FFE14D; }
+
+input::placeholder { color: #8E939C; }
+
+/* Cinta de precios que se desplaza (pantalla de inicio) */
+@keyframes tick {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.tape { animation: tick 48s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .tape { animation: none; }
+}
+
+/* La pantalla móvil se centra en la ventana para verla como un teléfono */
+body.movil {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
