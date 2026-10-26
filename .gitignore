@@ -1,1 +1,8 @@
 PRODUCT.md
+
+# Python
+.venv/
+__pycache__/
+
+# Salidas de la práctica (Fase 0)
+scraper/practice/libros.csv
